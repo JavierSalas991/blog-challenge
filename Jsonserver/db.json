@@ -1,0 +1,244 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "publicacion 1",
+            "author_id": 1,
+            "resume": "ejemplo de resumen de la publicacion id 1",
+            "created_at": "2023-08-29T10:00:00Z"
+        },
+        {
+            "id": 2,
+            "title": "publicacion 2",
+            "author_id": 2,
+            "resume": "ejemplo de resumen de la publicacion id 2",
+            "created_at": "2023-08-29T12:30:00Z"
+        },
+        {
+            "id": 3,
+            "title": "Feliz Cumpleaños, María! 🎉",
+            "author_id": 3,
+            "resume": "¡Hoy celebramos un año más de vida de nuestra querida amiga María! Deseamos que este nuevo año esté lleno de alegría, éxitos y momentos inolvidables. ¡Feliz cumpleaños, María! 🎂🎈",
+            "created_at": "2023-08-29T15:00:00Z"
+        },
+        {
+            "id": 4,
+            "title": "¡Felices Fiestas a Todos! 🎄",
+            "author_id": 4,
+            "resume": "En esta temporada de festividades, queremos desearles a todos una Navidad llena de amor, felicidad y prosperidad. Que la alegría de estas fiestas llene sus corazones. ¡Felices fiestas! 🌟🎁",
+            "created_at": "2023-12-25T10:00:00Z"
+        },
+        {
+            "id": 5,
+            "title": "Mi Primer Día en el Nuevo Trabajo",
+            "author_id": 5,
+            "resume": "¡Hoy fue mi primer día en el nuevo trabajo y estoy emocionado! Conocí a mis nuevos colegas y me presentaron a mis responsabilidades. ¡Espero aprender mucho y crecer en esta nueva etapa profesional! 💼👔",
+            "created_at": "2023-09-05T09:30:00Z"
+        },
+        {
+            "id": 6,
+            "title": "Una Aventura en las Montañas",
+            "author_id": 6,
+            "resume": "Compartiendo mi experiencia de este fin de semana, decidí hacer una caminata por las montañas. La vista panorámica desde la cima era simplemente impresionante. Naturaleza en su máxima expresión. 🏞️⛰️",
+            "created_at": "2023-07-18T14:00:00Z"
+        },
+        {
+            "id": 7,
+            "title": "Reflexiones del Año que Pasó",
+            "author_id": 7,
+            "resume": "Al mirar hacia atrás en este año, estoy agradecido por todas las lecciones aprendidas y los momentos compartidos. Ha habido desafíos, pero también logros significativos. ¡Enfrentemos el nuevo año con determinación! 🗓️📆",
+            "created_at": "2024-01-01T18:45:00Z"
+        },
+        {
+            "id": 8,
+            "title": "Bienvenido a la Familia, Nuevo Sobrino",
+            "author_id": 8,
+            "resume": "Hoy ha nacido nuestro nuevo sobrino. ¡Estamos emocionados y llenos de alegría! Felicitaciones a los nuevos padres. No podemos esperar para conocer al pequeño y crear recuerdos juntos. 👶🍼",
+            "created_at": "2023-10-10T08:15:00Z"
+        },
+        {
+            "id": 9,
+            "title": "Un Día de Playa Inolvidable",
+            "author_id": 9,
+            "resume": "Pasé un día increíble en la playa hoy. El sol brillaba, las olas eran perfectas para nadar y la arena estaba suave bajo mis pies. ¡Días como este son los que hacen que la vida sea maravillosa! 🏖️🌞",
+            "created_at": "2023-06-30T16:30:00Z"
+        },
+        {
+            "id": 10,
+            "title": "Comenzando un Nuevo Capítulo",
+            "author_id": 10,
+            "resume": "Cierro un capítulo importante en mi vida mientras me despido de mi trabajo actual. Agradezco a todos mis colegas por los recuerdos y la colaboración. ¡Emocionado por lo que el futuro tiene reservado! 📚✨",
+            "created_at": "2023-09-20T17:20:00Z"
+        },
+        {
+            "id": 11,
+            "title": "Celebrando Nuestro Aniversario",
+            "author_id": 11,
+            "resume": "Hoy celebramos otro año de amor y compañerismo. Mi pareja ha sido mi roca en cada situación. Aquí hay un brindis por muchos más años juntos. Te amo más que nunca. ❤️🥂",
+            "created_at": "2023-03-12T19:00:00Z"
+        },
+        {
+            "id": 12,
+            "title": "Voluntariado en el Refugio Local",
+            "author_id": 12,
+            "resume": "Pasé la tarde en el refugio local, ayudando a cuidar de los animales. Ver sus colas agitarse y sus ojos brillar de gratitud me recordó la importancia de dar de vuelta. 🐶🐱",
+            "created_at": "2023-04-28T14:45:00Z"
+        },
+        {
+            "id": 13,
+            "title": "Logros en el Gimnasio",
+            "author_id": 13,
+            "resume": "¡Hito personal alcanzado en el gimnasio! Después de meses de entrenamiento constante y una dieta saludable, finalmente logré mis objetivos de pérdida de peso. ¡Persistencia y dedicación valieron la pena! 💪🥗",
+            "created_at": "2023-02-10T10:10:00Z"
+        },
+        {
+            "id": 14,
+            "title": "Un Viaje Espontáneo a la Montaña",
+            "author_id": 14,
+            "resume": "A veces, las mejores aventuras son las inesperadas. Decidí emprender un viaje a la montaña en el último minuto y fue una experiencia rejuvenecedora. Naturaleza, aire fresco y momentos de tranquilidad. 🚗⛺",
+            "created_at": "2023-07-05T11:30:00Z"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "post_id": 1,
+            "user_id": 1,
+            "body": "Algun comentario",
+            "created_at": "2023-08-29T12:30:00Z"
+        },
+        {
+            "id": 2,
+            "post_id": 2,
+            "user_id": 2,
+            "body": "Otro comentario interesante",
+            "created_at": "2023-08-29T12:30:00Z"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Juan Perez",
+            "email": "email1@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 2,
+            "name": "Pedro Gomez",
+            "email": "email2@ejemplo.com",
+            "password": "ejemplo222"
+        },
+        {
+            "id": 3,
+            "name": "Martin Sarmiento",
+            "email": "email3@ejemplo.com",
+            "password": "ejemplo333"
+        },
+        {
+            "id": 4,
+            "name": "Ana Lopez",
+            "email": "email4@ejemplo.com",
+            "password": "ejemplo444"
+        },
+        {
+            "id": 5,
+            "name": "Maria Silva",
+            "email": "email5@ejemplo.com",
+            "password": "ejemplo555"
+        },
+        {
+            "id": 6,
+            "name": "Carlos Rodriguez",
+            "email": "email6@ejemplo.com",
+            "password": "ejemplo666"
+        },
+        {
+            "id": 7,
+            "name": "Luisa Martinez",
+            "email": "email7@ejemplo.com",
+            "password": "ejemplo777"
+        },
+        {
+            "id": 8,
+            "name": "Diego Ramirez",
+            "email": "email8@ejemplo.com",
+            "password": "ejemplo888"
+        },
+        {
+            "id": 9,
+            "name": "Fernanda Morales",
+            "email": "email9@ejemplo.com",
+            "password": "ejemplo999"
+        },
+        {
+            "id": 10,
+            "name": "Jorge Fernandez",
+            "email": "email10@ejemplo.com",
+            "password": "ejemplo101010"
+        },
+        {
+            "id": 11,
+            "name": "Isabel Gonzalez",
+            "email": "email11@ejemplo.com",
+            "password": "ejemplo111111"
+        },
+        {
+            "id": 12,
+            "name": "Andres Herrera",
+            "email": "email12@ejemplo.com",
+            "password": "ejemplo121212"
+        },
+        {
+            "id": 13,
+            "name": "Mariana Paredes",
+            "email": "email13@ejemplo.com",
+            "password": "ejemplo131313"
+        },
+        {
+            "id": 14,
+            "name": "Ricardo Castro",
+            "email": "email14@ejemplo.com",
+            "password": "ejemplo141414"
+        },
+        {
+            "id": 15,
+            "name": "Carmen Navarro",
+            "email": "email15@ejemplo.com",
+            "password": "ejemplo151515"
+        }
+    ],
+    "post_likes": [
+        {
+            "id": 1,
+            "user_id": 2,
+            "post_id": 1
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "post_id": 2
+        },
+        {
+            "id": 3,
+            "user_id": 3,
+            "post_id": 2
+        },
+        {
+            "id": 4,
+            "user_id": 3,
+            "post_id": 2
+        }
+    ],
+    "comment_likes": [
+        {
+            "id": 1,
+            "user_id": 2,
+            "comment_id": 1
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "comment_id": 2
+        }
+    ]
+}
