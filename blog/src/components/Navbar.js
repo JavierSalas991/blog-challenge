@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
     Box,
     Toolbar,
@@ -9,7 +9,6 @@ import {
     AppBar,
     Container,
     Avatar,
-    Button,
     Tooltip,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -18,10 +17,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import DeblurIcon from '@mui/icons-material/Deblur';
 import LogoutIcon from '@mui/icons-material/Logout';
+import UserContext from '../context/userContext/UserContext';
+import { Button } from 'bootstrap';
 
-const pages = ['Inicio', 'Mis publicaciones', 'Perfil'];
+
 
 function ResponsiveAppBar() {
+    
+    const { user } = useContext(UserContext)
+    const pages = user? ['Inicio', 'Mis publicaciones', 'Perfil'] : ['Inicio']
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -39,6 +44,15 @@ function ResponsiveAppBar() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    useEffect(() => {
+        console.log(user);
+    }, [user])
+
+    const firstLetters = text => {
+        const words = text.split(" ")
+        return (words[0][0] + words[1][0]).toUpperCase() || null
+    }
 
     return (
         <AppBar position="static">
@@ -138,11 +152,19 @@ function ResponsiveAppBar() {
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Opciones">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                            </IconButton>
-                        </Tooltip>
+                        {user ?
+                            <Tooltip title="Opciones">
+                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                    <Avatar alt={user.name} src="/static/images/avatar/2.jpg">{firstLetters(user.name)}</Avatar>
+                                </IconButton>
+                            </Tooltip>
+                            :
+                            <div className='d-flex'>
+                                <Typography style={{cursor: "pointer"}} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>
+                                <Typography style={{cursor: "pointer"}} textAlign="center">{"Crear cuenta"}</Typography>
+                            </div>
+                        }
+
                         <Menu
                             sx={{ mt: '45px' }}
                             id="menu-appbar"
