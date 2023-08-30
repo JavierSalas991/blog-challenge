@@ -23,7 +23,7 @@ function App() {
         <UserState>
           <Navbar></Navbar>
           <Routes>
-            <Route path="/inicio" element={<Home />} />
+            <Route path="/" element={<Home />} />
             {/* <Route path="/user*" element={<User />} /> */}
           </Routes>
         </UserState>

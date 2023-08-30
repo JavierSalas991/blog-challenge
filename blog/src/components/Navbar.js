@@ -23,9 +23,9 @@ import { Button } from 'bootstrap';
 
 
 function ResponsiveAppBar() {
-    
+
     const { user } = useContext(UserContext)
-    const pages = user? ['Inicio', 'Mis publicaciones', 'Perfil'] : ['Inicio']
+    const pages = user ? ['Inicio', 'Mis publicaciones', 'Perfil'] : ['Inicio']
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -63,7 +63,7 @@ function ResponsiveAppBar() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/inicio"
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -110,7 +110,7 @@ function ResponsiveAppBar() {
                                 <Link
                                     style={{ color: "black", textDecoration: "none" }}
                                     onClick={handleCloseNavMenu}
-                                    to={`/${page.toLowerCase().replace(/\s+/g, '')}`}
+                                    to={page === "Inicio" ? "/" : `/${page.toLowerCase().replace(/\s+/g, '')}`}
                                 >
                                     <p style={{ padding: "0 10px" }}>
                                         <Typography > {page}</Typography>
@@ -144,7 +144,7 @@ function ResponsiveAppBar() {
                             <Link
                                 style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
                                 onClick={handleCloseNavMenu}
-                                to={`/${page.toLowerCase().replace(/\s+/g, '')}`}
+                                to={page === "Inicio" ? "/" : `/${page.toLowerCase().replace(/\s+/g, '')}`}
                             >
                                 <Typography textAlign="center"> {page}</Typography>
                             </Link>
@@ -160,8 +160,8 @@ function ResponsiveAppBar() {
                             </Tooltip>
                             :
                             <div className='d-flex'>
-                                <Typography style={{cursor: "pointer"}} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>
-                                <Typography style={{cursor: "pointer"}} textAlign="center">{"Crear cuenta"}</Typography>
+                                <Typography style={{ cursor: "pointer" }} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>
+                                <Typography style={{ cursor: "pointer" }} textAlign="center">{"Crear cuenta"}</Typography>
                             </div>
                         }
 
