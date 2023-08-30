@@ -10,6 +10,7 @@ import {
   Link,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import UserState from "./context/userContext/UserState";
 
 
 function App() {
@@ -17,15 +18,17 @@ function App() {
     <div style={{
       height: "100vh",
       overflow: "auto"
-  }}>
+    }}>
       <BrowserRouter>
-      <Navbar></Navbar>
-        <Routes>
-          <Route path="/inicio" element={<Home />} />
-          {/* <Route path="users/*" element={<Users />} /> */}
-        </Routes>
+        <UserState>
+          <Navbar></Navbar>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/user*" element={<User />} /> */}
+          </Routes>
+        </UserState>
       </BrowserRouter>
-    </div>
+    </div >
   );
 }
 
