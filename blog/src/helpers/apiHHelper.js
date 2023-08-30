@@ -24,6 +24,17 @@ export const getPosts = async page => {
     return res;
 }
 
+export const getPost = async id => {
+    const url = `${serverUrl}/posts/${id}`
+    const res = await axios.get(url, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+
+    return res;
+}
+
 export const getCommentsById = async id => {
     const url = `${serverUrl}/comments?post_id=${id}`
     const res = await axios.get(url, {

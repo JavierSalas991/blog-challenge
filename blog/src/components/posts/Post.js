@@ -80,7 +80,7 @@ const Post = ({ post }) => {
 
     return (
         post && author && likes &&
-        <div className='row my-1 containerPost'>
+        <div className='row my-1 mx-0 px-0 containerPost'>
             <div className='col-4 col-md-3 col-lg-2 d-flex justify-content-end'>
                 <div className='postPhoto'>
                     <img className='w-100 h-auto' src={avatarIcon}></img>
