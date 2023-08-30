@@ -7,10 +7,10 @@ const UserState = (props) => {
 
     const initialState = {
         user: {
-            "id": 5,
-            "name": "Maria Silva",
-            "email": "email5@ejemplo.com",
-            "password": "ejemplo555"
+            "id": 2,
+            "name": "Pedro Gomez",
+            "email": "email2@ejemplo.com",
+            "password": "ejemplo222"
         }
     }
 
@@ -22,7 +22,6 @@ const UserState = (props) => {
             payload: user
         })
     }
-
 
     return (
         <UserContext.Provider
