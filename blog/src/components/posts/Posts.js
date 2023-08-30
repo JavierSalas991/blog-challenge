@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getNumberOfPosts, getPosts } from '../../helpers/apiHHelper';
 import { Pagination } from '@mui/material';
 import Post from './Post';
+import "./posts.css"
 
 const Posts = () => {
 
@@ -37,16 +38,32 @@ const Posts = () => {
 
 
     return (
-        page &&
-        <div>
-
-            <div className='d-flex justify-content-center'>
-                <Pagination onChange={changePage} className='mt-2' count={Math.ceil(numberOfPosts / 10)} color="primary" />
-            </div>
-            <div className='d-flex flex-column align-items-center justify-content-center'>
-                {posts && posts.map(p => <Post id={p.id} post={p} />)}
+        <div className='row d-flex flex-column align-items-center'>
+            <div className='col-12 col-md-8 d-flex flex-column justify-content-center align-items-center'>
+                <div className='d-flex justify-content-center'>
+                    <Pagination onChange={changePage} className='mt-2' count={Math.ceil(numberOfPosts / 10)} color="primary" />
+                </div>
+                <div className='d-flex flex-column align-items-center justify-content-center w-100'>
+                    {posts && posts.map(p => (
+                        <Post id={p.id} post={p} />
+                    ))}
+                </div>
             </div>
         </div>
+        // <>
+        //     {
+        //         page &&
+        //         <div className='d-flex flex-column justify-content-center bg-secondary'>
+        //             <div className='d-flex justify-content-center'>
+        //                 <Pagination onChange={changePage} className='mt-2' count={Math.ceil(numberOfPosts / 10)} color="primary" />
+        //             </div>
+        //             <div className='d-flex flex-column align-items-center justify-content-center'>
+        //                 {posts && posts.map(p => <Post id={p.id} post={p} />)}
+        //             </div>
+        //         </div>
+
+        //     }
+        // </>
     );
 };
 

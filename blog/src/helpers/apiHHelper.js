@@ -47,13 +47,11 @@ export const getLikesById = async id => {
 }
 
 export const getUser = async id => {
-    console.log(id);
      const url = `${serverUrl}/users/${id}`
      const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
         },
     })
-    console.log(res);
     return res
 }

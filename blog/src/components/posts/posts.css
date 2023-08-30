@@ -1,0 +1,47 @@
+.nameStyle {
+    font-weight: bold;
+    color: #1F618D;
+    font-size: 120%;
+}
+
+.titleStyle {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.resumeStyle{
+    font-style: italic;
+}
+
+.containerPost{
+    
+    font-size: 3vw;
+    width: 100%;
+    border-bottom: 1px solid #EBEDEF;
+    padding-bottom: 10px;
+}
+
+.postPhoto {
+    width: 90%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .postPhoto {
+        width: 80%;
+        height: auto;
+    }
+    .containerPost{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .postPhoto {
+        width: 70%;
+        height: auto;
+    }
+    .containerPost{
+        font-size: 15px;
+    }
+}
