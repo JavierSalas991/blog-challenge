@@ -4,7 +4,7 @@ import { getPost } from '../../helpers/apiHHelper';
 import Error404 from '../Error404';
 import Loading from '../Loading';
 
-const PostDetail = ({ }) => {
+const PostDetail = () => {
     const params = useParams();
     const id = params.id || null
 
@@ -14,7 +14,6 @@ const PostDetail = ({ }) => {
     const getPostById = async id => {
         try {
             const res = await getPost(id)
-            console.log(res);
             if (res.status === 200) {
                 setPostDetails(res.data)
             }
@@ -26,6 +25,7 @@ const PostDetail = ({ }) => {
     useEffect(() => {
         id && getPostById(id)
     }, [id])
+    
     return (
         postDetails ?
             <p>SABE</p>
@@ -33,9 +33,9 @@ const PostDetail = ({ }) => {
             error ?
                 <Error404 />
                 :
-        <div style={{minHeight: "90vh"}} className='d-flex align-items-center justify-content-center' >
-            <Loading show={true} text="Cargando..." />
-        </div>
+                <div style={{ minHeight: "90vh" }} className='d-flex align-items-center justify-content-center' >
+                    <Loading show={true} text="Cargando..." />
+                </div>
     );
 };
 

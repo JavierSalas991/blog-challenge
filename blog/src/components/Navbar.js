@@ -45,17 +45,13 @@ function ResponsiveAppBar() {
         setAnchorElUser(null);
     };
 
-    useEffect(() => {
-        console.log(user);
-    }, [user])
-
     const firstLetters = text => {
         const words = text.split(" ")
         return (words[0][0] + words[1][0]).toUpperCase() || null
     }
 
     return (
-        <AppBar position="fixed">
+        <AppBar position="">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <DeblurIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
