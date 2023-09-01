@@ -3,6 +3,21 @@
     color: #1F618D;
     font-size: 120%;
 }
+.mailStyle {
+    font-weight: bold;
+    color: #1F618D;
+    font-size: 100%;
+}
+
+.profileOptions{
+    text-decoration: none;
+    color: black;
+}
+.profileOptions:hover{
+    background-color: #1F618D;
+    color: #fff;
+    cursor: pointer
+}
 
 .titleStyle {
     text-decoration: none;
@@ -20,12 +35,26 @@
 }
 
 .containerPost{
-    
     font-size: 3vw;
     width: 100%;
     border-bottom: 1px solid #EBEDEF;
     padding-bottom: 10px;
 }
+
+.postTitle {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #1F618D;
+    margin-bottom: 10px;
+    /* text-align: center; */
+}
+.postResume {
+    font-size: 1.5vw;
+    font-style: italic;
+    margin-bottom: 2vw;
+    /* text-align: center; */
+}
+
 
 .postPhoto {
     width: 90%;

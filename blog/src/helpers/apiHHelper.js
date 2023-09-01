@@ -1,9 +1,8 @@
 import axios from "axios";
 const serverUrl = process.env.REACT_APP_JSON_SERVER_URL;
 
-
-export const getNumberOfPosts = async () => {
-    const url = `${serverUrl}/posts`
+export const getNumberOfPosts = async (id) => {
+    const url = id ? `${serverUrl}/posts` :  `${serverUrl}/posts`
     const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
@@ -35,36 +34,31 @@ export const getPost = async id => {
     return res;
 }
 
-export const getCommentsById = async id => {
+export const getCommentsById = id => {
     const url = `${serverUrl}/comments?post_id=${id}`
-    const res = await axios.get(url, {
+    return axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
         },
     })
-
-    return res;
 }
 
-export const getLikesById = async id => {
+export const getLikesById = id => {
     const url = `${serverUrl}/post_likes?post_id=${id}`
-    const res = await axios.get(url, {
+    return axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
         },
     })
-
-    return res;
 }
 
-export const getUser = async id => {
+export const getUser = id => {
     const url = `${serverUrl}/users/${id}`
-    const res = await axios.get(url, {
+    return axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
         },
     })
-    return res
 }
 
 export const postPostLike = async data => {
@@ -80,12 +74,20 @@ export const postPostLike = async data => {
 
 }
 
-export const deletePostLike = async id => {
+export const deletePostLike = id => {
     const url = `${serverUrl}/post_likes/${id}`
-    const res = await axios.delete(url, {
+    return axios.delete(url, {
         'headers': {
             'Content-Type': 'application/json'
         },
     })
-    return res
+}
+
+export const getPostsById = id => {
+    const url = `${serverUrl}/posts?author_id=${id}`
+    return axios.get(url, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
 }

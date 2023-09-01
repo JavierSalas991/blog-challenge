@@ -7,11 +7,11 @@ const UserState = (props) => {
 
     const initialState = {
         user: {
-            "id": 2,
-            "name": "Pedro Gomez",
-            "email": "email2@ejemplo.com",
-            "password": "ejemplo222"
-        }
+            "id": 7,
+            "name": "Ignacio Salas",
+            "email": "ignaciosalas@ejemplo.com",
+            "password": "ejemplo777"
+          }
     }
 
     const [state, dispatch] = useReducer(userReducer, initialState)

@@ -13,7 +13,7 @@ import Navbar from "./components/Navbar";
 import UserState from "./context/userContext/UserState";
 import PostDetail from "./components/posts/PostDetail";
 import Sidebar from "./components/Sidebar";
-
+import PersonalPosts from "./components/posts/personalPosts/PersonalPosts";
 
 function App() {
   return (
@@ -25,12 +25,13 @@ function App() {
         <UserState>
           <Navbar></Navbar>
           <div className="row w-100 m-0 p-0">
-            <div className="d-none d-md-block col-3 m-0 p-0">
-              <Sidebar/>
+            <div className="d-none d-md-block col-3 col-xl-2 m-0 p-0">
+              <Sidebar />
             </div>
-            <div className="col-12 col-md-9  m-0 p-0">
+            <div className="col-12 col-md-9 col-xl-10 m-0 p-0">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/posts/:id" element={<PersonalPosts/>}/>
                 <Route path="/postDetail/:id" element={<PostDetail />} />
               </Routes>
             </div>

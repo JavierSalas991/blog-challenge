@@ -45,10 +45,6 @@ function ResponsiveAppBar() {
         setAnchorElUser(null);
     };
 
-    useEffect(() => {
-        console.log(user);
-    }, [user])
-
     const firstLetters = text => {
         const words = text.split(" ")
         return (words[0][0] + words[1][0]).toUpperCase() || null

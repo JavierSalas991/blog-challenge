@@ -27,7 +27,7 @@
     {
       "id": 4,
       "title": "Arqueología Reveladora: Antigua Ciudad Descubierta Bajo el Hielo",
-      "author_id": 5,
+      "author_id": 7,
       "resume": "Un equipo de arqueólogos ha desenterrado los restos de una ciudad antigua bajo una capa de hielo en una región remota. Este descubrimiento podría proporcionar información invaluable sobre las civilizaciones antiguas que habitaban la zona.",
       "created_at": "2023-06-05T09:15:00Z",
       "body": "Las excavaciones revelaron estructuras sorprendentemente conservadas, artefactos y murales que arrojan luz sobre la vida cotidiana de la sociedad que vivía allí hace siglos. La ubicación bajo el hielo ha ayudado a preservar muchos aspectos de la ciudad. Los arqueólogos están ansiosos por analizar más a fondo los hallazgos."
@@ -104,8 +104,8 @@
     },
     {
       "id": 7,
-      "name": "Luisa Martinez",
-      "email": "email7@ejemplo.com",
+      "name": "Ignacio Salas",
+      "email": "ignaciosalas@ejemplo.com",
       "password": "ejemplo777"
     },
     {
@@ -175,28 +175,28 @@
     },
     {
       "user_id": 2,
-      "post_id": 4,
-      "id": 12
-    },
-    {
-      "user_id": 2,
-      "post_id": 1,
-      "id": 13
-    },
-    {
-      "user_id": 2,
-      "post_id": 3,
-      "id": 14
-    },
-    {
-      "user_id": 2,
       "post_id": 6,
       "id": 15
     },
     {
       "user_id": 2,
-      "post_id": 2,
+      "post_id": 1,
       "id": 16
+    },
+    {
+      "user_id": 7,
+      "post_id": 1,
+      "id": 17
+    },
+    {
+      "user_id": 7,
+      "post_id": 2,
+      "id": 18
+    },
+    {
+      "user_id": 7,
+      "post_id": 4,
+      "id": 19
     }
   ],
   "comment_likes": [
