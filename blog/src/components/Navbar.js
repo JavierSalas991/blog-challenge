@@ -129,7 +129,7 @@ function ResponsiveAppBar() {
                                     onClick={handleCloseNavMenu}
                                     to={"/profile/" + user.id}
                                 >
-                                     <p style={{ padding: "0 30px 0 15px" }}>
+                                    <p style={{ padding: "0 30px 0 15px" }}>
                                         <Typography >Perfil</Typography>
                                     </p>
                                 </Link>
@@ -168,22 +168,23 @@ function ResponsiveAppBar() {
                             </Link>
                         ))} */}
 
-                        <Link
-                            style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
-                            onClick={handleCloseNavMenu}
-                            to={"/"}
-                        >
-                            <Typography textAlign="center">Inicio</Typography>
-                        </Link>
                         {user &&
-                            <Link
-                                style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
-                                onClick={handleCloseNavMenu}
-                                to={"/profile/" + user.id}
-                            >
-
-                                <Typography textAlign="center">Perfil</Typography>
-                            </Link>
+                            <>
+                                <Link
+                                    style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
+                                    onClick={handleCloseNavMenu}
+                                    to={"/"}
+                                >
+                                    <Typography textAlign="center">Inicio</Typography>
+                                </Link>
+                                <Link
+                                    style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
+                                    onClick={handleCloseNavMenu}
+                                    to={"/profile/" + user.id}
+                                >
+                                    <Typography textAlign="center">Mis publicaciones</Typography>
+                                </Link>
+                            </>
                         }
                     </Box>
 

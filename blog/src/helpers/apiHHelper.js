@@ -1,8 +1,8 @@
 import axios from "axios";
 const serverUrl = process.env.REACT_APP_JSON_SERVER_URL;
 
-export const getNumberOfPosts = async (id) => {
-    const url = id ? `${serverUrl}/posts` :  `${serverUrl}/posts`
+export const getNumberOfPosts = async () => {
+    const url = `${serverUrl}/posts`
     const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
@@ -11,9 +11,31 @@ export const getNumberOfPosts = async (id) => {
 
     return res.data.length;
 }
+export const getNumberOfPostsById = async (id) => {
+    const url = `${serverUrl}/posts?author_id=${id}`
+    const res = await axios.get(url, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+
+    console.log(res.data.length);
+
+    return res.data.length;
+}
 
 export const getPosts = async page => {
     const url = `${serverUrl}/posts?_page=${page}&limit=15`
+    const res = await axios.get(url, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+
+    return res;
+}
+export const getPostsById = async ({page, id}) => {
+    const url = `${serverUrl}/posts?_page=${page}&limit=10&author_id=${id}`
     const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
@@ -83,11 +105,11 @@ export const deletePostLike = id => {
     })
 }
 
-export const getPostsById = id => {
-    const url = `${serverUrl}/posts?author_id=${id}`
-    return axios.get(url, {
-        'headers': {
-            'Content-Type': 'application/json'
-        },
-    })
-}
+// export const getPostsById = id => {
+//     const url = `${serverUrl}/posts?author_id=${id}`
+//     return axios.get(url, {
+//         'headers': {
+//             'Content-Type': 'application/json'
+//         },
+//     })
+// }

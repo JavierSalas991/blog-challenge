@@ -4,19 +4,19 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import avatarIcon from "../../img/avatar.jpg"
 import UserContext from '../../context/userContext/UserContext';
-import { daysSince, textSince } from '../../helpers/helper';
+import { textSince } from '../../helpers/helper';
 
-const Post = ({ post }) => {
+const UserPost = ({ post }) => {
 
     const { user } = useContext(UserContext)
 
-    const [author, setAuthor] = useState(null)
+    // const [author, setAuthor] = useState(null)
     const [likes, setLikes] = useState(null)
 
-    const getMainData = ({ id, author_id }) => {
-        Promise.all([getUser(author_id), getLikesById(id)])
-            .then(([user, likes]) => {
-                user && user.data && setAuthor(user.data)
+    const getMainData = ({ id }) => {
+        Promise.all([getLikesById(id)])
+            .then(([likes]) => {
+                // user && user.data && setAuthor(user.data)
                 likes && likes.data && setLikes(likes.data)
             })
             .catch(error => {
@@ -54,15 +54,14 @@ const Post = ({ post }) => {
     }, [post])
 
     return (
-        post && author && likes &&
+        post && likes &&
         <div className='row my-1 mx-0 px-0 containerPost'>
-            <div className='col-4 col-md-3 col-lg-2 d-flex justify-content-end'>
+            {/* <div className='col-4 col-md-3 col-lg-2 d-flex justify-content-end'>
                 <div className='postPhoto'>
                     <img className='w-100 h-auto' src={avatarIcon}></img>
                 </div>
-            </div>
-            <div className='d-flex flex-column col-8 col-md-9 col-lg-10'>
-                <a href={`/profile/${author.id}`} className='nameStyle'>{author.name}</a>
+            </div> */}
+            <div className='col-8 col-md-9 col-lg-10'>
                 <a href={`/postdetail/${post.id}`} title="Ver publicacion" className='titleStyle mb-0'>{post.title}</a>
                 <p className='resumeStyle'>{post.resume}</p>
                 <div className='d-flex flex-column'>
@@ -83,7 +82,7 @@ const Post = ({ post }) => {
                             }
                         </div>
                     }
-                    <p style={{ fontSize: "85%" }} className='my-0 ms-4 text-muted'>{textSince(post.created_at)}</p>
+                    <p style={{ fontSize: "85%", marginLeft: "2.3rem" }} className='my-0 text-muted'>{textSince(post.created_at)}</p>
                 </div>
             </div>
         </div>
@@ -91,4 +90,4 @@ const Post = ({ post }) => {
     );
 };
 
-export default Post;
+export default UserPost;

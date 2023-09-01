@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { getPost } from '../../helpers/apiHHelper';
 import Error404 from '../Error404';
 import Loading from '../Loading';
+import { spanishDate } from '../../helpers/helper';
 
 const PostDetail = () => {
     const params = useParams();
@@ -26,12 +27,6 @@ const PostDetail = () => {
         id && getPostById(id)
     }, [id])
 
-    useEffect(() => {
-        console.log('====================================');
-        console.log(postDetails);
-        console.log('====================================');
-    }, [postDetails])
-
     return (
         postDetails ?
             <div style={{ marginTop: "5rem" }}>
@@ -41,6 +36,11 @@ const PostDetail = () => {
                         <h4 className='postResume'>{postDetails.resume}</h4>
                         <hr></hr>
                         <p>{postDetails.body}</p>
+                        <p
+                            style={{ fontSize: "85%", marginLeft: "" }}
+                            className='my-0 text-muted'>
+                            Publicado el dia {spanishDate(postDetails.created_at)}
+                        </p>
                     </div>
                     <div className='col-4'>
 

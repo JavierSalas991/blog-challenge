@@ -1,0 +1,27 @@
+.numberProfile {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.containerNumbers {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;   
+}
+
+.usernameStyle{
+    font-weight: bold;
+    color: #1F618D;
+    font-size: 15px;
+}
+
+@media (min-width: 768px) {
+    .containerNumbers {
+        display: none;
+    }
+    .usernameStyle{
+        font-size: 20px;
+    }
+    .containerProfile{
+        display: none;
+    }
+}

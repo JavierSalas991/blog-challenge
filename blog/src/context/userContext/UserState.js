@@ -6,6 +6,7 @@ import UserContext from './UserContext';
 const UserState = (props) => {
 
     const initialState = {
+        // user: null
         user: {
             "id": 7,
             "name": "Ignacio Salas",
