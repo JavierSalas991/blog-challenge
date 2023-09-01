@@ -1,214 +1,247 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "Descubrimiento Científico: Nueva Especie de Mariposa",
-      "author_id": 1,
-      "resume": "Un equipo de científicos ha descubierto una nueva especie de mariposa en una selva tropical. Esta fascinante revelación podría arrojar luz sobre la biodiversidad de la región y la importancia de la conservación.",
-      "created_at": "2023-09-15T08:00:00Z",
-      "body": "Investigadores de diferentes partes del mundo han trabajado en conjunto para identificar y estudiar esta nueva especie de mariposa. Los detalles sobre su ciclo de vida, comportamiento y hábitat aún están siendo investigados. Los científicos están emocionados por la posibilidad de aprender más sobre esta mariposa y su impacto en el ecosistema circundante."
-    },
-    {
-      "id": 2,
-      "title": "Avance Médico: Nueva Terapia Genética para Enfermedades Hereditarias",
-      "author_id": 3,
-      "resume": "Científicos han desarrollado una terapia génica revolucionaria que tiene el potencial de tratar enfermedades genéticas previamente incurables. Este avance podría cambiar la vida de millones de personas en todo el mundo.",
-      "created_at": "2023-08-20T10:30:00Z",
-      "body": "La terapia se basa en la edición precisa de genes defectuosos utilizando la tecnología CRISPR-Cas9. Los primeros ensayos clínicos han mostrado resultados prometedores en la corrección de mutaciones genéticas responsables de enfermedades hereditarias. Aunque queda trabajo por hacer, este avance marca un hito importante en la medicina genética."
-    },
-    {
-      "id": 3,
-      "title": "Exploración Espacial: Nuevo Planeta Potencialmente Habitable Descubierto",
-      "author_id": 7,
-      "resume": "Astrónomos han detectado un planeta en la zona habitable de una estrella cercana. Las condiciones en este planeta podrían ser propicias para albergar vida, lo que abre emocionantes posibilidades para la búsqueda de vida extraterrestre.",
-      "created_at": "2023-07-10T15:45:00Z",
-      "body": "Utilizando telescopios avanzados, los científicos han identificado características atmosféricas y geológicas en el planeta que sugieren la presencia de agua líquida en su superficie. Aunque se necesita más investigación para confirmar la habitabilidad, este descubrimiento genera un entusiasmo renovado en la comunidad astronómica."
-    },
-    {
-      "id": 4,
-      "title": "Arqueología Reveladora: Antigua Ciudad Descubierta Bajo el Hielo",
-      "author_id": 7,
-      "resume": "Un equipo de arqueólogos ha desenterrado los restos de una ciudad antigua bajo una capa de hielo en una región remota. Este descubrimiento podría proporcionar información invaluable sobre las civilizaciones antiguas que habitaban la zona.",
-      "created_at": "2023-06-05T09:15:00Z",
-      "body": "Las excavaciones revelaron estructuras sorprendentemente conservadas, artefactos y murales que arrojan luz sobre la vida cotidiana de la sociedad que vivía allí hace siglos. La ubicación bajo el hielo ha ayudado a preservar muchos aspectos de la ciudad. Los arqueólogos están ansiosos por analizar más a fondo los hallazgos."
-    },
-    {
-      "id": 5,
-      "title": "Avance Tecnológico: Baterías de Estado Sólido para Vehículos Eléctricos",
-      "author_id": 2,
-      "resume": "Investigadores han desarrollado una batería de estado sólido con una densidad de energía significativamente mayor que las baterías tradicionales. Esto podría revolucionar la industria de los vehículos eléctricos al abordar las limitaciones de autonomía.",
-      "created_at": "2023-05-02T14:00:00Z",
-      "body": "Las baterías de estado sólido ofrecen una mayor capacidad de almacenamiento y tiempos de carga más rápidos en comparación con las baterías convencionales de iones de litio. Si esta tecnología se implementa a gran escala, podría impulsar la adopción masiva de vehículos eléctricos y reducir la dependencia de los combustibles fósiles."
-    },
-    {
-      "id": 6,
-      "title": "Descubrimiento Oceanográfico: Nueva Especie de Medusa en las Profundidades",
-      "author_id": 6,
-      "resume": "Una expedición en las fosas abisales ha revelado una nueva especie de medusa bioluminiscente. Este hallazgo arroja luz sobre las adaptaciones únicas de las criaturas que habitan en los rincones más oscuros del océano.",
-      "created_at": "2023-04-18T12:45:00Z",
-      "body": "Las profundidades marinas siguen siendo un misterio en gran medida inexplorado. La nueva medusa descubierta posee características bioluminiscentes sorprendentes que podrían estar relacionadas con la captura de presas y la comunicación en entornos de poca luz. La expedición también destacó la importancia de la preservación de estos hábitats inexplorados."
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "post_id": 1,
-      "user_id": 1,
-      "body": "Algun comentario",
-      "created_at": "2023-08-29T12:30:00Z"
-    },
-    {
-      "id": 2,
-      "post_id": 2,
-      "user_id": 2,
-      "body": "Otro comentario interesante",
-      "created_at": "2023-08-29T12:30:00Z"
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "name": "Juan Perez",
-      "email": "email1@ejemplo.com",
-      "password": "ejemplo111"
-    },
-    {
-      "id": 2,
-      "name": "Pedro Gomez",
-      "email": "email2@ejemplo.com",
-      "password": "ejemplo222"
-    },
-    {
-      "id": 3,
-      "name": "Martin Sarmiento",
-      "email": "email3@ejemplo.com",
-      "password": "ejemplo333"
-    },
-    {
-      "id": 4,
-      "name": "Ana Lopez",
-      "email": "email4@ejemplo.com",
-      "password": "ejemplo444"
-    },
-    {
-      "id": 5,
-      "name": "Maria Silva",
-      "email": "email5@ejemplo.com",
-      "password": "ejemplo555"
-    },
-    {
-      "id": 6,
-      "name": "Carlos Rodriguez",
-      "email": "email6@ejemplo.com",
-      "password": "ejemplo666"
-    },
-    {
-      "id": 7,
-      "name": "Ignacio Salas",
-      "email": "ignaciosalas@ejemplo.com",
-      "password": "ejemplo777"
-    },
-    {
-      "id": 8,
-      "name": "Diego Ramirez",
-      "email": "email8@ejemplo.com",
-      "password": "ejemplo888"
-    },
-    {
-      "id": 9,
-      "name": "Fernanda Morales",
-      "email": "email9@ejemplo.com",
-      "password": "ejemplo999"
-    },
-    {
-      "id": 10,
-      "name": "Jorge Fernandez",
-      "email": "email10@ejemplo.com",
-      "password": "ejemplo101010"
-    },
-    {
-      "id": 11,
-      "name": "Isabel Gonzalez",
-      "email": "email11@ejemplo.com",
-      "password": "ejemplo111111"
-    },
-    {
-      "id": 12,
-      "name": "Andres Herrera",
-      "email": "email12@ejemplo.com",
-      "password": "ejemplo121212"
-    },
-    {
-      "id": 13,
-      "name": "Mariana Paredes",
-      "email": "email13@ejemplo.com",
-      "password": "ejemplo131313"
-    },
-    {
-      "id": 14,
-      "name": "Ricardo Castro",
-      "email": "email14@ejemplo.com",
-      "password": "ejemplo141414"
-    },
-    {
-      "id": 15,
-      "name": "Carmen Navarro",
-      "email": "email15@ejemplo.com",
-      "password": "ejemplo151515"
-    }
-  ],
-  "post_likes": [
-    {
-      "id": 2,
-      "user_id": 1,
-      "post_id": 2
-    },
-    {
-      "id": 3,
-      "user_id": 3,
-      "post_id": 2
-    },
-    {
-      "id": 4,
-      "user_id": 3,
-      "post_id": 2
-    },
-    {
-      "user_id": 2,
-      "post_id": 6,
-      "id": 15
-    },
-    {
-      "user_id": 2,
-      "post_id": 1,
-      "id": 16
-    },
-    {
-      "user_id": 7,
-      "post_id": 1,
-      "id": 17
-    },
-    {
-      "user_id": 7,
-      "post_id": 2,
-      "id": 18
-    },
-    {
-      "user_id": 7,
-      "post_id": 4,
-      "id": 19
-    }
-  ],
-  "comment_likes": [
-    {
-      "id": 1,
-      "user_id": 2,
-      "comment_id": 1
-    },
-    {
-      "id": 2,
-      "user_id": 1,
-      "comment_id": 2
-    }
-  ]
+    "posts": [
+        {
+            "id": 1,
+            "title": "Descubrimiento Científico: Nueva Especie de Mariposa",
+            "author_id": 1,
+            "resume": "Un equipo de científicos ha descubierto una nueva especie de mariposa en una selva tropical. Esta fascinante revelación podría arrojar luz sobre la biodiversidad de la región y la importancia de la conservación.",
+            "created_at": "2023-09-15T08:00:00Z",
+            "body": "Investigadores de diferentes partes del mundo han trabajado en conjunto para identificar y estudiar esta nueva especie de mariposa. Los detalles sobre su ciclo de vida, comportamiento y hábitat aún están siendo investigados. Los científicos están emocionados por la posibilidad de aprender más sobre esta mariposa y su impacto en el ecosistema circundante."
+        },
+        {
+            "id": 2,
+            "title": "Avance Médico: Nueva Terapia Genética para Enfermedades Hereditarias",
+            "author_id": 3,
+            "resume": "Científicos han desarrollado una terapia génica revolucionaria que tiene el potencial de tratar enfermedades genéticas previamente incurables. Este avance podría cambiar la vida de millones de personas en todo el mundo.",
+            "created_at": "2023-08-20T10:30:00Z",
+            "body": "La terapia se basa en la edición precisa de genes defectuosos utilizando la tecnología CRISPR-Cas9. Los primeros ensayos clínicos han mostrado resultados prometedores en la corrección de mutaciones genéticas responsables de enfermedades hereditarias. Aunque queda trabajo por hacer, este avance marca un hito importante en la medicina genética."
+        },
+        {
+            "id": 3,
+            "title": "Exploración Espacial: Nuevo Planeta Potencialmente Habitable Descubierto",
+            "author_id": 7,
+            "resume": "Astrónomos han detectado un planeta en la zona habitable de una estrella cercana. Las condiciones en este planeta podrían ser propicias para albergar vida, lo que abre emocionantes posibilidades para la búsqueda de vida extraterrestre.",
+            "created_at": "2023-07-10T15:45:00Z",
+            "body": "Utilizando telescopios avanzados, los científicos han identificado características atmosféricas y geológicas en el planeta que sugieren la presencia de agua líquida en su superficie. Aunque se necesita más investigación para confirmar la habitabilidad, este descubrimiento genera un entusiasmo renovado en la comunidad astronómica."
+        },
+        {
+            "id": 4,
+            "title": "Arqueología Reveladora: Antigua Ciudad Descubierta Bajo el Hielo",
+            "author_id": 7,
+            "resume": "Un equipo de arqueólogos ha desenterrado los restos de una ciudad antigua bajo una capa de hielo en una región remota. Este descubrimiento podría proporcionar información invaluable sobre las civilizaciones antiguas que habitaban la zona.",
+            "created_at": "2023-06-05T09:15:00Z",
+            "body": "Las excavaciones revelaron estructuras sorprendentemente conservadas, artefactos y murales que arrojan luz sobre la vida cotidiana de la sociedad que vivía allí hace siglos. La ubicación bajo el hielo ha ayudado a preservar muchos aspectos de la ciudad. Los arqueólogos están ansiosos por analizar más a fondo los hallazgos."
+        },
+        {
+            "id": 5,
+            "title": "Avance Tecnológico: Baterías de Estado Sólido para Vehículos Eléctricos",
+            "author_id": 2,
+            "resume": "Investigadores han desarrollado una batería de estado sólido con una densidad de energía significativamente mayor que las baterías tradicionales. Esto podría revolucionar la industria de los vehículos eléctricos al abordar las limitaciones de autonomía.",
+            "created_at": "2023-05-02T14:00:00Z",
+            "body": "Las baterías de estado sólido ofrecen una mayor capacidad de almacenamiento y tiempos de carga más rápidos en comparación con las baterías convencionales de iones de litio. Si esta tecnología se implementa a gran escala, podría impulsar la adopción masiva de vehículos eléctricos y reducir la dependencia de los combustibles fósiles."
+        },
+        {
+            "id": 6,
+            "title": "Descubrimiento Oceanográfico: Nueva Especie de Medusa en las Profundidades",
+            "author_id": 6,
+            "resume": "Una expedición en las fosas abisales ha revelado una nueva especie de medusa bioluminiscente. Este hallazgo arroja luz sobre las adaptaciones únicas de las criaturas que habitan en los rincones más oscuros del océano.",
+            "created_at": "2023-04-18T12:45:00Z",
+            "body": "Las profundidades marinas siguen siendo un misterio en gran medida inexplorado. La nueva medusa descubierta posee características bioluminiscentes sorprendentes que podrían estar relacionadas con la captura de presas y la comunicación en entornos de poca luz. La expedición también destacó la importancia de la preservación de estos hábitats inexplorados."
+        },
+        {
+            "id": 7,
+            "title": "Descubrimiento Paleontológico: Nueva Especie de Dinosaurio Revelada",
+            "author_id": 7,
+            "resume": "Un equipo de paleontólogos ha anunciado el descubrimiento de una nueva especie de dinosaurio en un yacimiento fósil recientemente excavado. Este hallazgo promete ofrecer fascinantes conocimientos sobre la vida prehistórica en la Tierra.",
+            "created_at": "2023-09-01T14:30:00Z",
+            "body": "Los restos fósiles de esta nueva especie de dinosaurio, bautizada como 'Dinosaurus descubrensis', fueron encontrados en capas de sedimento que datan de hace millones de años. Los científicos están emocionados por lo que estos fósiles podrían revelar sobre la anatomía, el comportamiento y el entorno en el que vivía esta criatura prehistórica. La investigación está en marcha para desentrañar los secretos que se esconden detrás de este emocionante descubrimiento."
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "post_id": 1,
+            "user_id": 1,
+            "body": "Algun comentario",
+            "created_at": "2023-08-29T12:30:00Z"
+        },
+        {
+            "id": 2,
+            "post_id": 2,
+            "user_id": 2,
+            "body": "Otro comentario interesante",
+            "created_at": "2023-08-29T12:30:00Z"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Juan Perez",
+            "email": "email1@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 2,
+            "name": "Pedro Gomez",
+            "email": "email2@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 3,
+            "name": "Martin Sarmiento",
+            "email": "email3@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 4,
+            "name": "Ana Lopez",
+            "email": "email4@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 5,
+            "name": "Maria Silva",
+            "email": "email5@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 6,
+            "name": "Carlos Rodriguez",
+            "email": "email6@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 7,
+            "name": "Ignacio Salas",
+            "email": "ignaciosalas@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 8,
+            "name": "Diego Ramirez",
+            "email": "email8@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 9,
+            "name": "Fernanda Morales",
+            "email": "email9@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 10,
+            "name": "Jorge Fernandez",
+            "email": "email10@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 11,
+            "name": "Isabel Gonzalez",
+            "email": "email11@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 12,
+            "name": "Andres Herrera",
+            "email": "email12@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 13,
+            "name": "Mariana Paredes",
+            "email": "email13@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 14,
+            "name": "Ricardo Castro",
+            "email": "email14@ejemplo.com",
+            "password": "ejemplo111"
+        },
+        {
+            "id": 15,
+            "name": "Carmen Navarro",
+            "email": "email15@ejemplo.com",
+            "password": "ejemplo111"
+        }
+    ],
+    "post_likes": [
+        {
+            "id": 2,
+            "user_id": 1,
+            "post_id": 2
+        },
+        {
+            "id": 3,
+            "user_id": 3,
+            "post_id": 2
+        },
+        {
+            "id": 4,
+            "user_id": 3,
+            "post_id": 2
+        },
+        {
+            "user_id": 2,
+            "post_id": 6,
+            "id": 15
+        },
+        {
+            "user_id": 2,
+            "post_id": 1,
+            "id": 16
+        },
+        {
+            "user_id": 7,
+            "post_id": 1,
+            "id": 17
+        },
+        {
+            "user_id": 7,
+            "post_id": 4,
+            "id": 19
+        },
+        {
+            "user_id": 9,
+            "post_id": 3,
+            "id": 21
+        },
+        {
+            "user_id": 9,
+            "post_id": 4,
+            "id": 22
+        },
+        {
+            "user_id": 10,
+            "post_id": 3,
+            "id": 23
+        },
+        {
+            "user_id": 10,
+            "post_id": 5,
+            "id": 24
+        },
+        {
+            "user_id": 10,
+            "post_id": 6,
+            "id": 25
+        },
+        {
+            "user_id": 11,
+            "post_id": 5,
+            "id": 26
+        }
+    ],
+    "comment_likes": [
+        {
+            "id": 1,
+            "user_id": 2,
+            "comment_id": 1
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "comment_id": 2
+        }
+    ]
 }
