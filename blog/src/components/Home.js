@@ -3,7 +3,7 @@ import Posts from './posts/Posts';
 
 const Home = () => {
     return (
-        <div>
+        <div style={{marginTop: "5rem"}}>
            <Posts></Posts>
         </div>
     );

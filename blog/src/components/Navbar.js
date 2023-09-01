@@ -51,7 +51,7 @@ function ResponsiveAppBar() {
     }
 
     return (
-        <AppBar position="">
+        <AppBar position="fixed">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <DeblurIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

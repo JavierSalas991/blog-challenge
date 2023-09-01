@@ -1,8 +1,8 @@
 import axios from "axios";
 const serverUrl = process.env.REACT_APP_JSON_SERVER_URL;
 
-export const getNumberOfPosts = async () => {
-    const url = `${serverUrl}/posts`
+export const getNumberOfPosts = async (id) => {
+    const url = id ? `${serverUrl}/posts?author_id=${id}` :  `${serverUrl}/posts`
     const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
@@ -77,6 +77,15 @@ export const postPostLike = async data => {
 export const deletePostLike = id => {
     const url = `${serverUrl}/post_likes/${id}`
     return axios.delete(url, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+}
+
+export const getPostsById = id => {
+    const url = `${serverUrl}/posts?author_id=${id}`
+    return axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
         },
