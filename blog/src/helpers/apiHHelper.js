@@ -34,7 +34,7 @@ export const getPosts = async page => {
 
     return res;
 }
-export const getPostsById = async ({page, id}) => {
+export const getPostsById = async ({ page, id }) => {
     const url = `${serverUrl}/posts?_page=${page}&limit=10&author_id=${id}`
     const res = await axios.get(url, {
         'headers': {
@@ -105,11 +105,27 @@ export const deletePostLike = id => {
     })
 }
 
-// export const getPostsById = id => {
-//     const url = `${serverUrl}/posts?author_id=${id}`
-//     return axios.get(url, {
-//         'headers': {
-//             'Content-Type': 'application/json'
-//         },
-//     })
-// }
+const verifyEmail = async email => {
+    const url = `${serverUrl}/users?email=${email}`
+    const res = await axios.get(url, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+
+    return res.data.length > 0
+}
+
+export const postRegister = async data => {
+    const existentMail = await verifyEmail(data.email)
+    if (existentMail) {
+        throw new Error('El correo electrónico ya está registrado.');
+    }
+    const url = `${serverUrl}/users`
+    const res = await axios.post(url, data, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+    return res
+}

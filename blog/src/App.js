@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import Home from "./components/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./App.css"
 import {
   BrowserRouter,
   Routes,
@@ -15,6 +15,7 @@ import PostDetail from "./components/posts/PostDetail";
 import Sidebar from "./components/user/Sidebar";
 import Profile from "./components/user/Profile";
 import UserContext from "./context/userContext/UserContext";
+import Register from "./components/Register";
 
 function App() {
 
@@ -26,7 +27,6 @@ function App() {
       overflow: "auto"
     }}>
       <BrowserRouter>
-        {/* <UserState> */}
         <Navbar></Navbar>
         <div className="row w-100 m-0 p-0">
           {user &&
@@ -39,10 +39,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/profile/:id" element={<Profile />} />
               <Route path="/postDetail/:id" element={<PostDetail />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
           </div>
         </div>
-        {/* </UserState> */}
       </BrowserRouter>
     </div >
   );

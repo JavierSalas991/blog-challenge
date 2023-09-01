@@ -11,21 +11,18 @@ import {
     Avatar,
     Tooltip,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
-// import { Menu as MenuIcon } from '@mui/icons-material';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
 import DeblurIcon from '@mui/icons-material/Deblur';
-import LogoutIcon from '@mui/icons-material/Logout';
 import UserContext from '../context/userContext/UserContext';
-import { Button } from 'bootstrap';
-
-
 
 function ResponsiveAppBar() {
 
+    const navigate = useNavigate()
+    const location = useLocation()
+    const path = location.pathname
+
     const { user } = useContext(UserContext)
-    // const pages = user ? ['Inicio', 'Mis publicaciones', 'Perfil'] : ['Inicio']
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -49,6 +46,10 @@ function ResponsiveAppBar() {
         const words = text.split(" ")
         return (words[0][0] + words[1][0]).toUpperCase() || null
     }
+
+    useEffect(() => {
+      console.log(path);
+    }, [path])
 
     return (
         <AppBar position="fixed">
@@ -102,17 +103,6 @@ function ResponsiveAppBar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {/* {pages.map((page) => (
-                                <Link
-                                    style={{ color: "black", textDecoration: "none" }}
-                                    onClick={handleCloseNavMenu}
-                                    to={page === "Inicio" ? "/" : `/${page.toLowerCase().replace(/\s+/g, '')}`}
-                                >
-                                    <p style={{ padding: "0 10px" }}>
-                                        <Typography > {page}</Typography>
-                                    </p>
-                                </Link>
-                            ))} */}
 
                             <Link
                                 style={{ color: "black", textDecoration: "none" }}
@@ -157,17 +147,6 @@ function ResponsiveAppBar() {
                         BLOG
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {/* {pages.map((page) => (
-
-                            <Link
-                                style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
-                                onClick={handleCloseNavMenu}
-                                to={page === "Inicio" ? "/" : `/${page.toLowerCase().replace(/\s+/g, '')}`}
-                            >
-                                <Typography textAlign="center"> {page}</Typography>
-                            </Link>
-                        ))} */}
-
                         {user &&
                             <>
                                 <Link
@@ -197,8 +176,8 @@ function ResponsiveAppBar() {
                             </Tooltip>
                             :
                             <div className='d-flex'>
-                                <Typography style={{ cursor: "pointer" }} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>
-                                <Typography style={{ cursor: "pointer" }} textAlign="center">{"Crear cuenta"}</Typography>
+                                {path !== "/login" && <Typography onClick={() => navigate("/login")} style={{ cursor: "pointer" }} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>}
+                                {path !== "/register" && <Typography onClick={() => navigate("/register")} style={{ cursor: "pointer" }} textAlign="center">{"Crear cuenta"}</Typography>}
                             </div>
                         }
 
@@ -218,11 +197,9 @@ function ResponsiveAppBar() {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-
                             <MenuItem onClick={handleCloseUserMenu}>
                                 <Typography textAlign="right">{"Cerrar sesion"}</Typography>
                             </MenuItem>
-
                         </Menu>
                     </Box>
                 </Toolbar>

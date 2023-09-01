@@ -6,13 +6,13 @@ import UserContext from './UserContext';
 const UserState = (props) => {
 
     const initialState = {
-        // user: null
-        user: {
-            "id": 7,
-            "name": "Ignacio Salas",
-            "email": "ignaciosalas@ejemplo.com",
-            "password": "ejemplo777"
-          }
+        user: null
+        // user: {
+        //     "id": 7,
+        //     "name": "Ignacio Salas",
+        //     "email": "ignaciosalas@ejemplo.com",
+        //     "password": "ejemplo777"
+        //   }
     }
 
     const [state, dispatch] = useReducer(userReducer, initialState)
