@@ -31,7 +31,7 @@ function App() {
             <div className="col-12 col-md-9 col-xl-10 m-0 p-0">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/posts/:id" element={<PersonalPosts/>}/>
+                <Route path="/profile/:id" element={<PersonalPosts/>}/>
                 <Route path="/postDetail/:id" element={<PostDetail />} />
               </Routes>
             </div>

@@ -33,7 +33,7 @@ const Sidebar = () => {
     }, [user])
 
     return (
-        user &&
+user &&
         <div style={{
             // transform: `translatex(${xPosition2}px)`,
             minHeight: "100%",
@@ -51,8 +51,8 @@ const Sidebar = () => {
             border: "1px solid #E8E7E7"
             // backgroundColor: "#f3f2f2",
             // transition: "0.333s"
-        }}
-        >
+          }}
+          >
             <div className='d-flex flex-column p-4'>
                 <img className='w-100 h-auto' src={avatarIcon}></img>
                 <h4 className='nameStyle mt-2'>{user.name}</h4>
@@ -60,7 +60,7 @@ const Sidebar = () => {
                 <hr />
                 <a href={`/posts/${user.id}`} className='m-0 p-2 profileOptions d-flex resumeStyle'><ArticleIcon></ArticleIcon> Mis publicaciones ({numberOfPosts})</a>
                 <p className='m-0 p-2 profileOptions d-flex resumeStyle'><InsertPhotoIcon></InsertPhotoIcon> Mis fotos (0)</p>
-            </div>
+</div>
         </div>
     );
 };

@@ -25,7 +25,7 @@ import { Button } from 'bootstrap';
 function ResponsiveAppBar() {
 
     const { user } = useContext(UserContext)
-    const pages = user ? ['Inicio', 'Mis publicaciones', 'Perfil'] : ['Inicio']
+    // const pages = user ? ['Inicio', 'Mis publicaciones', 'Perfil'] : ['Inicio']
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -102,7 +102,7 @@ function ResponsiveAppBar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
+                            {/* {pages.map((page) => (
                                 <Link
                                     style={{ color: "black", textDecoration: "none" }}
                                     onClick={handleCloseNavMenu}
@@ -112,7 +112,29 @@ function ResponsiveAppBar() {
                                         <Typography > {page}</Typography>
                                     </p>
                                 </Link>
-                            ))}
+                            ))} */}
+
+                            <Link
+                                style={{ color: "black", textDecoration: "none" }}
+                                onClick={handleCloseNavMenu}
+                                to={"/"}
+                            >
+                                <p style={{ padding: "0 30px 0 15px" }}>
+                                    <Typography >Inicio</Typography>
+                                </p>
+                            </Link>
+                            {user &&
+                                <Link
+                                    style={{ color: "black", textDecoration: "none" }}
+                                    onClick={handleCloseNavMenu}
+                                    to={"/profile/" + user.id}
+                                >
+                                     <p style={{ padding: "0 30px 0 15px" }}>
+                                        <Typography >Perfil</Typography>
+                                    </p>
+                                </Link>
+                            }
+
                         </Menu>
                     </Box>
                     <DeblurIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -135,7 +157,7 @@ function ResponsiveAppBar() {
                         BLOG
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
+                        {/* {pages.map((page) => (
 
                             <Link
                                 style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
@@ -144,7 +166,25 @@ function ResponsiveAppBar() {
                             >
                                 <Typography textAlign="center"> {page}</Typography>
                             </Link>
-                        ))}
+                        ))} */}
+
+                        <Link
+                            style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
+                            onClick={handleCloseNavMenu}
+                            to={"/"}
+                        >
+                            <Typography textAlign="center">Inicio</Typography>
+                        </Link>
+                        {user &&
+                            <Link
+                                style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
+                                onClick={handleCloseNavMenu}
+                                to={"/profile/" + user.id}
+                            >
+
+                                <Typography textAlign="center">Perfil</Typography>
+                            </Link>
+                        }
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
