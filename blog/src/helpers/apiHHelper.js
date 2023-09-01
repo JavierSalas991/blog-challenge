@@ -2,7 +2,7 @@ import axios from "axios";
 const serverUrl = process.env.REACT_APP_JSON_SERVER_URL;
 
 export const getNumberOfPosts = async (id) => {
-    const url = id ? `${serverUrl}/posts?author_id=${id}` :  `${serverUrl}/posts`
+    const url = id ? `${serverUrl}/posts` :  `${serverUrl}/posts`
     const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
