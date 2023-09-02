@@ -6,7 +6,7 @@ import "./posts.css"
 import DeblurIcon from '@mui/icons-material/Deblur';
 import Title from '../Title';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import NewPost from './NewPost';
+import CreateOrEditPost from './CreateOrEditPost';
 import UserContext from '../../context/userContext/UserContext';
 
 const Posts = () => {
@@ -64,7 +64,7 @@ const Posts = () => {
                     <Title />
                     {user ?
                         newPost ?
-                            <NewPost reload={reload} setEditing={setNewPost}></NewPost>
+                            <CreateOrEditPost reload={reload} setEditing={setNewPost}></CreateOrEditPost>
                             :
                             <Button onClick={() => setNewPost(true)}><AddCircleOutlineIcon></AddCircleOutlineIcon> nueva publicacion</Button>
                         : null

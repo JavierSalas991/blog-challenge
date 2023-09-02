@@ -6,7 +6,7 @@ import { Form } from 'react-bootstrap';
 import { getCurrentDateInISOFormat, getThisMoment } from '../../helpers/helper';
 import { postNewPost, putPost } from '../../helpers/apiHHelper';
 
-const NewPost = ({ setEditing, reload, previousData }) => {
+const CreateOrEditPost = ({ setEditing, reload, previousData }) => {
 
     const { user } = useContext(UserContext)
 
@@ -144,4 +144,4 @@ const NewPost = ({ setEditing, reload, previousData }) => {
     );
 };
 
-export default NewPost;
+export default CreateOrEditPost;

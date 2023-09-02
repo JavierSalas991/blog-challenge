@@ -9,7 +9,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { Button } from '@mui/material';
-import NewPost from './NewPost';
+import CreateOrEditPost from './CreateOrEditPost';
 import GoBack from '../GoBack';
 
 const PostDetail = () => {
@@ -63,7 +63,7 @@ const PostDetail = () => {
             {postDetails && author ?
                 editing ?
                     <div className='d-flex justify-content-center' style={{ marginTop: "5rem" }}>
-                        <NewPost setEditing={setEditing} reload={reload} previousData={postDetails}></NewPost>
+                        <CreateOrEditPost setEditing={setEditing} reload={reload} previousData={postDetails}></CreateOrEditPost>
                     </div>
                     :
                     <div className='d-flex justify-content-center' style={{ marginTop: "5rem" }}>
