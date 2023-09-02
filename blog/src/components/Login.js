@@ -133,7 +133,7 @@ const Login = () => {
 
                 </form>
                 <div className='mt-3 d-flex'>
-                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Aún no  te  registraste? <a style={{ textDecoration: "none" }} href="/register">CREAR CUENTA</a></p>
+                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Aún no  te  registraste? <span className='text-primary' style={{  cursor: "pointer" }} onClick={() => navigate("/register")}>CREAR CUENTA</span></p>
                 </div>
             </div>
         </div>

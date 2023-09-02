@@ -50,6 +50,7 @@ function App() {
             </div>
           }
           <div className={`col-12 col-md-9 col-xl-10 ${!user && "container"}`}>
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile/:id" element={<Profile />} />

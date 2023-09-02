@@ -5,8 +5,11 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import avatarIcon from "../../img/avatar.jpg"
 import UserContext from '../../context/userContext/UserContext';
 import { textSince } from '../../helpers/helper';
+import { useNavigate } from 'react-router-dom';
 
 const UserPost = ({ post }) => {
+
+    const navigate = useNavigate()
 
     const { user } = useContext(UserContext)
 
@@ -62,7 +65,7 @@ const UserPost = ({ post }) => {
                 </div>
             </div> */}
             <div className='col-8 col-md-9 col-lg-10'>
-                <a href={`/postdetail/${post.id}`} title="Ver publicacion" className='titleStyle mb-0'>{post.title}</a>
+                <p onClick={() => navigate(`/postdetail/${post.id}`)} title="Ver publicacion" className='titleStyle mb-0'>{post.title}</p>
                 <p className='resumeStyle'>{post.resume}</p>
                 <div className='d-flex flex-column'>
                     {user && likes.some(({ user_id }) => user_id === user.id) ?

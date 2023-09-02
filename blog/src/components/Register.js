@@ -174,7 +174,7 @@ const Register = () => {
 
                 </form>
                 <div className='mt-3 d-flex'>
-                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Ya tienes una cuenta? <a style={{ textDecoration: "none" }} href="/login">INICIA SESIÓN</a></p>
+                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Ya tienes una cuenta? <span className='text-primary' style={{  cursor: "pointer" }} onClick={() => navigate("/login")}>INICIA SESIÓN</span></p>
                 </div>
             </div>
         </div>

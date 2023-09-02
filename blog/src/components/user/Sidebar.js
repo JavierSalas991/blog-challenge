@@ -5,8 +5,11 @@ import MailIcon from '@mui/icons-material/Mail';
 import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 import ArticleIcon from '@mui/icons-material/Article';
 import { getNumberOfPostsById, getPostsById } from '../../helpers/apiHHelper';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+
+    const  navigate =  useNavigate()
 
     const { user } = useContext(UserContext)
 
@@ -53,7 +56,7 @@ const Sidebar = () => {
                 <h4 className='nameStyle mt-2'>{user.name}</h4>
                 <p className='mailStyle mb-0'>{user.email}</p>
                 <hr />
-                <a href={`/profile/${user.id}`} className='m-0 p-2 profileOptions d-flex resumeStyle'><ArticleIcon></ArticleIcon> Mis publicaciones ({numberOfPosts})</a>
+                <p onClick={() => navigate(`/profile/${user.id}`)} className='m-0 p-2 profileOptions d-flex resumeStyle'><ArticleIcon></ArticleIcon> Mis publicaciones ({numberOfPosts})</p>
                 <p className='m-0 p-2 profileOptions d-flex resumeStyle'><InsertPhotoIcon></InsertPhotoIcon> Mis fotos (0)</p>
             </div>
         </div>

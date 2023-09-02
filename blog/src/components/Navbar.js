@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
         }).then((result) => {
             if (result.isConfirmed) {
                 setUserWithCookie(null)
-                navigate("/")
+                window.location = "/"
             }
         })
     }
