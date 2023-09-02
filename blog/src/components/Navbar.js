@@ -15,6 +15,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import DeblurIcon from '@mui/icons-material/Deblur';
 import UserContext from '../context/userContext/UserContext';
+import Swal from 'sweetalert2';
 
 function ResponsiveAppBar() {
 
@@ -22,7 +23,7 @@ function ResponsiveAppBar() {
     const location = useLocation()
     const path = location.pathname
 
-    const { user } = useContext(UserContext)
+    const { user, setUserWithCookie } = useContext(UserContext)
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -47,8 +48,25 @@ function ResponsiveAppBar() {
         return (words[0][0] + words[1][0]).toUpperCase() || null
     }
 
+    const cerrarSesion = () => {
+        Swal.fire({
+            html: '¿Seguro que desea  cerrar sesión?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#2c5884',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Salir',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                setUserWithCookie(null)
+                navigate("/")
+            }
+        })
+    }
+
     useEffect(() => {
-      console.log(path);
+        console.log(path);
     }, [path])
 
     return (
@@ -198,7 +216,7 @@ function ResponsiveAppBar() {
                             onClose={handleCloseUserMenu}
                         >
                             <MenuItem onClick={handleCloseUserMenu}>
-                                <Typography textAlign="right">{"Cerrar sesion"}</Typography>
+                                <Typography onClick={cerrarSesion} textAlign="right">{"Cerrar sesion"}</Typography>
                             </MenuItem>
                         </Menu>
                     </Box>

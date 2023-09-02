@@ -1,5 +1,5 @@
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Home from "./components/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css"
@@ -16,10 +16,25 @@ import Sidebar from "./components/user/Sidebar";
 import Profile from "./components/user/Profile";
 import UserContext from "./context/userContext/UserContext";
 import Register from "./components/Register";
+import Login from "./components/Login";
+import { getCookie } from "./helpers/helper";
 
 function App() {
 
-  const { user } = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext)
+
+  const saveUser = () => {
+    try {
+      const user = JSON.parse(getCookie("user"))
+      setUser(user)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    saveUser()
+  }, [])
 
   return (
     <div style={{
@@ -40,6 +55,7 @@ function App() {
               <Route path="/profile/:id" element={<Profile />} />
               <Route path="/postDetail/:id" element={<PostDetail />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </div>
         </div>

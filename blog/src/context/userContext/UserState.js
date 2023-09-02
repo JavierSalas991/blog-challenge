@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import userReducer from './userReducer';
 import { USER } from '../../types/userTypes';
 import UserContext from './UserContext';
+import { deleteCookie, setCookie } from '../../helpers/helper';
 
 const UserState = (props) => {
 
@@ -17,6 +18,18 @@ const UserState = (props) => {
 
     const [state, dispatch] = useReducer(userReducer, initialState)
 
+    const setUserWithCookie = user => {
+        if (user){
+            setCookie("user", JSON.stringify(user), 0.5)
+        } else {
+            deleteCookie("user")
+        }
+        dispatch({
+            type: USER,
+            payload: user
+        })
+    }
+
     const setUser = user => {
         dispatch({
             type: USER,
@@ -28,7 +41,8 @@ const UserState = (props) => {
         <UserContext.Provider
             value={{
                 user: state.user,
-                setUser
+                setUser,
+                setUserWithCookie
             }}
         >
             {props.children}

@@ -129,3 +129,28 @@ export const postRegister = async data => {
     })
     return res
 }
+
+export const loginUser = async ({ email, password }) => {
+    try {
+        const url = `${serverUrl}/users?email=${email}`
+        const res = await axios.get(url, {
+            'headers': {
+                'Content-Type': 'application/json'
+            },
+        });
+        const user = res.data[0];
+        if (!user) {
+            throw new Error('El correo electrónico no está registrado');
+        }
+
+        if (user.password === password) {
+            console.log(res);
+            return res
+        } else {
+            throw new Error('Contraseña incorrecta');
+        }
+        
+    } catch (error) {
+        throw error
+    }
+};

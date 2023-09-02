@@ -45,19 +45,19 @@ const Register = () => {
                     res.status === 201 && userCreated()
                 })
                 .catch(error => {
-                        Swal.fire({
-                            html: error.message,
-                            icon: 'error',
-                            showCancelButton: true,
-                            confirmButtonColor: '#2c5884',
-                            cancelButtonColor: '#d33',
-                            confirmButtonText: 'Iniciar sesión',
-                            cancelButtonText: 'Cancelar'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                navigate("/login")
-                            }
-                        })
+                    Swal.fire({
+                        html: error.message,
+                        icon: 'error',
+                        showCancelButton: true,
+                        confirmButtonColor: '#2c5884',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Iniciar sesión',
+                        cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            navigate("/login")
+                        }
+                    })
                 })
         }
     };
@@ -168,8 +168,9 @@ const Register = () => {
                         </FormControl>
                     </div>
 
-
-                    <Button className='mt-2' variant="contained" type="submit">Crear cuenta</Button>
+                    <div  className='mt-4 d-flex justify-content-center'>
+                        <Button variant="contained" type="submit">Crear cuenta</Button>
+                    </div>
 
                 </form>
                 <div className='mt-3 d-flex'>
