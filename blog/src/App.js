@@ -1,6 +1,5 @@
 
 import React, { useContext, useEffect } from "react";
-import Home from "./components/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css"
 import {
@@ -18,6 +17,7 @@ import UserContext from "./context/userContext/UserContext";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import { getCookie } from "./helpers/helper";
+import Posts from "./components/posts/Posts";
 
 function App() {
 
@@ -52,7 +52,7 @@ function App() {
           <div className={`col-12 col-md-9 col-xl-10 ${!user && "container"}`}>
 
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Posts />} />
               <Route path="/profile/:id" element={<Profile />} />
               <Route path="/postDetail/:id" element={<PostDetail />} />
               <Route path="/register" element={<Register />} />

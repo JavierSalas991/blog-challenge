@@ -43,12 +43,6 @@ const PostDetail = () => {
         postDetails && getAuthor(postDetails.author_id)
     }, [postDetails])
 
-    useEffect(() => {
-      console.log('====================================');
-      console.log(author);
-      console.log('====================================');
-    }, [author])
-
     return (
         postDetails && author ?
             <div style={{ marginTop: "5rem" }}>

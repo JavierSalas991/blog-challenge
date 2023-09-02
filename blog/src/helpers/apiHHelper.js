@@ -25,7 +25,7 @@ export const getNumberOfPostsById = async (id) => {
 }
 
 export const getPosts = async page => {
-    const url = `${serverUrl}/posts?_page=${page}&limit=15`
+    const url = `${serverUrl}/posts?_page=${page}&_limit=10&_sort=created_at&_order=desc`;
     const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
@@ -84,7 +84,6 @@ export const getUser = id => {
 }
 
 export const postPostLike = async data => {
-    const { user_id, post_id } = data
     const url = `${serverUrl}/post_likes`
     const res = await axios.post(url, data, {
         'headers': {
@@ -149,8 +148,17 @@ export const loginUser = async ({ email, password }) => {
         } else {
             throw new Error('Contraseña incorrecta');
         }
-        
+
     } catch (error) {
         throw error
     }
 };
+
+export const postNewPost = data => {
+    const url = `${serverUrl}/posts`
+    return axios.post(url, data, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+}

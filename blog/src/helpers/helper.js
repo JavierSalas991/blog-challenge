@@ -62,6 +62,18 @@ export const getCookie = (cname) => {
     return "";
 }
 
-export  const deleteCookie = name=> {
+export const deleteCookie = name => {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+}
+
+export function getCurrentDateInISOFormat() {
+    const fechaActual = new Date();
+    const año = fechaActual.getFullYear();
+    const mes = String(fechaActual.getMonth() + 1).padStart(2, '0');
+    const día = String(fechaActual.getDate()).padStart(2, '0');
+    const hora = String(fechaActual.getHours()).padStart(2, '0');
+    const minuto = String(fechaActual.getMinutes()).padStart(2, '0');
+    const segundo = String(fechaActual.getSeconds()).padStart(2, '0');
+
+    return `${año}-${mes}-${día}T${hora}:${minuto}:${segundo}Z`;
 }

@@ -56,6 +56,19 @@
     /* text-align: center; */
 }
 
+.buttonAddPost{
+    border: 2px #1F618D solid;
+    color: #1F618D;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4rem;
+    right: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .postPhoto {
     width: 90%;
@@ -69,6 +82,12 @@
     }
     .containerPost{
         font-size: 13px;
+    }
+    .buttonAddPost{
+        width: 45px;
+        height: 45px;
+        top: 5rem;
+        right: 2rem;
     }
 }
 
