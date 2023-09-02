@@ -60,7 +60,7 @@ const ProfilePosts = ({ actualUser }) => {
                         <p className='text-muted'>Aún no tiene{user && user.id === actualUser.id ? "s" : ""} publicaciones...</p>
                     : null
                 }
-                <div className=' d-flex flex-column align-items-center justify-content-center w-100'>
+                <div className='d-flex flex-column align-items-center justify-content-center w-100'>
                     {posts && posts.map(post => <UserPost id={post.id} post={post} />)}
                 </div>
             </div>

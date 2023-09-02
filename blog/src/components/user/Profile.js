@@ -1,13 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Error404 from '../Error404';
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getUser } from '../../helpers/apiHHelper';
 import UserContext from '../../context/userContext/UserContext';
 import ProfileData from './ProfileData';
 import "./user.css"
 import ProfilePosts from './ProfilePosts';
+import GoBack from '../GoBack';
 
 const Profile = () => {
+
+   const navigate = useNavigate()
 
     const { user } = useContext(UserContext)
 
@@ -30,12 +33,13 @@ const Profile = () => {
 
     return (
         actualUser ?
-            <div style={{ marginTop: "5rem" }}>
+            <div className='d-flex flex-column align-items-center' style={{ marginTop: "5rem" }}>
                 <div className={(!user || actualUser.id !== user.id) ? "" : "containerProfile"}>
                     <ProfileData actualUser={actualUser}></ProfileData>
                 </div>
 
                 <ProfilePosts actualUser={actualUser}></ProfilePosts>
+                <GoBack></GoBack>
             </div>
             :
             <Error404></Error404>

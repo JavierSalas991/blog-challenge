@@ -40,6 +40,9 @@
     width: 100%;
     border-bottom: 1px solid #EBEDEF;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .postTitle {

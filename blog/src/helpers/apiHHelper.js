@@ -35,7 +35,7 @@ export const getPosts = async page => {
     return res;
 }
 export const getPostsById = async ({ page, id }) => {
-    const url = `${serverUrl}/posts?_page=${page}&limit=10&author_id=${id}`
+    const url = `${serverUrl}/posts?_page=${page}&limit=10&author_id=${id}&_sort=created_at&_order=desc`;
     const res = await axios.get(url, {
         'headers': {
             'Content-Type': 'application/json'
@@ -157,6 +157,16 @@ export const loginUser = async ({ email, password }) => {
 export const postNewPost = data => {
     const url = `${serverUrl}/posts`
     return axios.post(url, data, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+}
+
+export const putPost = ({ id, title, body, resume }) => {
+    const newData = { title, body, resume }
+    const url = `${serverUrl}/posts/${id}`
+    return axios.patch(url, newData, {
         'headers': {
             'Content-Type': 'application/json'
         },

@@ -51,15 +51,20 @@ const Posts = () => {
         page && getPostsOfPage(page)
     }, [page])
 
-    return (
-        <div style={{ marginTop: "5rem" }}>
+    const reload = () => {
+        getPostsLength()
+        getPostsOfPage(1)
+    }
 
-            <div className='w-100 row d-flex flex-column align-items-center'>
+    return (
+        <div className="d-flex flex-column align-items-center justify-content-center" style={{ marginTop: "5rem" }}>
+
+            <div className='w-100 row d-flex flex-column align-items-center justify-content-center'>
                 <div className=' d-flex flex-column justify-content-center align-items-center'>
                     <Title />
                     {user ?
                         newPost ?
-                            <NewPost getPostsLength={getPostsLength} getPostsOfPage={getPostsOfPage} setNewPost={setNewPost}></NewPost>
+                            <NewPost reload={reload} setEditing={setNewPost}></NewPost>
                             :
                             <Button onClick={() => setNewPost(true)}><AddCircleOutlineIcon></AddCircleOutlineIcon> nueva publicacion</Button>
                         : null
@@ -67,7 +72,7 @@ const Posts = () => {
                     <div className=' d-flex justify-content-center'>
                         <Pagination onChange={changePage} className='mt-2' count={Math.ceil(numberOfPosts / 10)} color="primary" />
                     </div>
-                    <div className=' d-flex flex-column align-items-center justify-content-center w-100'>
+                    <div className=' d-flex flex-column align-items-center justify-content-center col-12 col-md-11 col-lg-10'>
                         {posts && posts.map(post => <Post id={post.id} post={post} />)}
                     </div>
                 </div>

@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Post = ({ post }) => {
 
-    const navigate  = useNavigate()
+    const navigate = useNavigate()
 
     const { user } = useContext(UserContext)
 
@@ -58,17 +58,20 @@ const Post = ({ post }) => {
 
     return (
         post && author && likes &&
-        <div className='row my-1 mx-0 px-0 containerPost'>
+        <div className='row my-1 containerPost '>
             <div className='col-4 col-md-3 col-lg-2 d-flex justify-content-end'>
                 <div className='postPhoto'>
                     <img className='w-100 h-auto' src={avatarIcon}></img>
                 </div>
             </div>
             <div className='d-flex flex-column col-8 col-md-9 col-lg-10'>
-                <p onClick={() => navigate(`/profile/${author.id}`)}   className='nameStyle'>{author.name}</p>
-                <p onClick={() => navigate(`/postdetail/${post.id}`)}   className='titleStyle'>{post.title}</p>
+                <div className='d-flex justify-content-between'>
+                    <p onClick={() => navigate(`/profile/${author.id}`)} className='nameStyle'>{author.name}</p>
+                    <p style={{ fontSize: "85%" }} className='mt-1 text-muted'>{textSince(post.created_at)}</p>
+                </div>
+                <p onClick={() => navigate(`/postdetail/${post.id}`)} className='titleStyle'>{post.title}</p>
                 <p className='resumeStyle'>{post.resume}</p>
-                <div className='d-flex flex-column'>
+                <div className='d-flex'>
                     {user && likes.some(({ user_id }) => user_id === user.id) ?
                         <div className='d-flex align-items-center'>
                             <FavoriteIcon onClick={dislike} style={{ cursor: "pointer", color: "#CB4335", marginLeft: "10px" }} />
@@ -86,7 +89,6 @@ const Post = ({ post }) => {
                             }
                         </div>
                     }
-                    <p style={{ fontSize: "85%" }} className='my-0 ms-4 text-muted'>{textSince(post.created_at)}</p>
                 </div>
             </div>
         </div>

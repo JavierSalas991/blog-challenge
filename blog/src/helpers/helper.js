@@ -3,15 +3,14 @@ export const textSince = (date) => {
     const today = new Date();
     const difference = today - since;
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-
-    console.log(days);
+    
     if (days === 0) {
-        return "Publicado hoy"
+        return "Hoy"
     } else if (days <= 7) {
-        return `Publicado hace ${days} dia${days !== 1 ? "s" : ""}`
+        return `Hace ${days} dia${days !== 1 ? "s" : ""}`
     } else {
         const weeks = Math.floor(days / 7)
-        return `Publicado hace ${weeks} semana${weeks !== 1 ? "s" : ""}`
+        return `Hace ${weeks} semana${weeks !== 1 ? "s" : ""}`
     }
 }
 
