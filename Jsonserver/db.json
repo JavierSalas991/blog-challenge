@@ -111,6 +111,22 @@
       "body": "Este es un resumen de una publicacionn escrita por ercilia salas de prueba Este es un resumen de una publicacionn escrita por ercilia salas de pruebaEste es un resumen de una publicacionn escrita por ercilia salas de pruebaEste es un resumen de una publicacionn escrita por ercilia salas de prueba",
       "created_at": "2023-09-02T12:11:46Z",
       "id": 14
+    },
+    {
+      "title": "PRUEBA XD PUAJ",
+      "author_id": 7,
+      "resume": "Esta es una descripcion",
+      "body": "y ese es el cuerpo",
+      "created_at": "2023-09-02T19:21:31Z",
+      "id": 15
+    },
+    {
+      "title": "Nueva",
+      "author_id": 7,
+      "resume": "getPostById",
+      "body": "Cuerpo",
+      "created_at": "2023-09-02T19:49:23Z",
+      "id": 16
     }
   ],
   "comments": [
@@ -373,6 +389,21 @@
       "user_id": 21,
       "post_id": 12,
       "id": 36
+    },
+    {
+      "user_id": 7,
+      "post_id": 12,
+      "id": 37
+    },
+    {
+      "user_id": 7,
+      "post_id": 13,
+      "id": 38
+    },
+    {
+      "user_id": 7,
+      "post_id": 16,
+      "id": 39
     }
   ],
   "comment_likes": [
