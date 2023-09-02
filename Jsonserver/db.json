@@ -5,7 +5,7 @@
       "title": "Descubrimiento Científico: Nueva Especie de Mariposa",
       "author_id": 1,
       "resume": "Un equipo de científicos ha descubierto una nueva especie de mariposa en una selva tropical. Esta fascinante revelación podría arrojar luz sobre la biodiversidad de la región y la importancia de la conservación.",
-      "created_at": "2023-09-15T08:00:00Z",
+      "created_at": "2021-09-15T08:00:00Z",
       "body": "Investigadores de diferentes partes del mundo han trabajado en conjunto para identificar y estudiar esta nueva especie de mariposa. Los detalles sobre su ciclo de vida, comportamiento y hábitat aún están siendo investigados. Los científicos están emocionados por la posibilidad de aprender más sobre esta mariposa y su impacto en el ecosistema circundante."
     },
     {
@@ -55,6 +55,62 @@
       "resume": "Un equipo de paleontólogos ha anunciado el descubrimiento de una nueva especie de dinosaurio en un yacimiento fósil recientemente excavado. Este hallazgo promete ofrecer fascinantes conocimientos sobre la vida prehistórica en la Tierra.",
       "created_at": "2023-09-01T14:30:00Z",
       "body": "Los restos fósiles de esta nueva especie de dinosaurio, bautizada como 'Dinosaurus descubrensis', fueron encontrados en capas de sedimento que datan de hace millones de años. Los científicos están emocionados por lo que estos fósiles podrían revelar sobre la anatomía, el comportamiento y el entorno en el que vivía esta criatura prehistórica. La investigación está en marcha para desentrañar los secretos que se esconden detrás de este emocionante descubrimiento."
+    },
+    {
+      "title": "TITULO EJEMPLO",
+      "author_id": 16,
+      "resume": "Resumen de la publicvacion",
+      "body": "este es el cuerpo",
+      "created_at": "2023-09-02T11:50:25Z",
+      "id": 8
+    },
+    {
+      "title": "titulo 2",
+      "author_id": 16,
+      "resume": "resumen nuevo probando",
+      "body": "Un equipo de paleontólogos ha anunciado el descubrimiento de una nueva especie de dinosaurio en un yacimiento fósil recientemente excavado. Este hallazgo promete ofrecer fascinantes conocimientos sobre la vida prehistórica en la Tierra",
+      "created_at": "2023-09-02T11:57:16Z",
+      "id": 9
+    },
+    {
+      "title": "titulo 3",
+      "author_id": 16,
+      "resume": "resumen xd",
+      "body": "asdasdasdasdasdasdasd",
+      "created_at": "2023-09-02T11:59:21Z",
+      "id": 10
+    },
+    {
+      "title": "titulo 4",
+      "author_id": 16,
+      "resume": "546",
+      "body": "asdasd",
+      "created_at": "2023-09-02T12:01:07Z",
+      "id": 11
+    },
+    {
+      "title": "titulo 5",
+      "author_id": 16,
+      "resume": "titulo 5",
+      "body": "asdasdasd",
+      "created_at": "2023-09-02T12:03:30Z",
+      "id": 12
+    },
+    {
+      "title": "ejemplo nuevo",
+      "author_id": 16,
+      "resume": "asdasdasdasd",
+      "body": "nueva",
+      "created_at": "2023-09-02T12:04:49Z",
+      "id": 13
+    },
+    {
+      "title": "ALGO ESCRITO POR LA SACHI",
+      "author_id": 21,
+      "resume": "Este es un resumen de una publicacionn escrita por ercilia salas de prueba",
+      "body": "Este es un resumen de una publicacionn escrita por ercilia salas de prueba Este es un resumen de una publicacionn escrita por ercilia salas de pruebaEste es un resumen de una publicacionn escrita por ercilia salas de pruebaEste es un resumen de una publicacionn escrita por ercilia salas de prueba",
+      "created_at": "2023-09-02T12:11:46Z",
+      "id": 14
     }
   ],
   "comments": [
@@ -272,6 +328,51 @@
       "user_id": 11,
       "post_id": 5,
       "id": 26
+    },
+    {
+      "user_id": 16,
+      "post_id": 1,
+      "id": 27
+    },
+    {
+      "user_id": 16,
+      "post_id": 4,
+      "id": 29
+    },
+    {
+      "user_id": 16,
+      "post_id": 6,
+      "id": 30
+    },
+    {
+      "user_id": 16,
+      "post_id": 2,
+      "id": 31
+    },
+    {
+      "user_id": 16,
+      "post_id": 8,
+      "id": 32
+    },
+    {
+      "user_id": 16,
+      "post_id": 7,
+      "id": 33
+    },
+    {
+      "user_id": 21,
+      "post_id": 14,
+      "id": 34
+    },
+    {
+      "user_id": 21,
+      "post_id": 13,
+      "id": 35
+    },
+    {
+      "user_id": 21,
+      "post_id": 12,
+      "id": 36
     }
   ],
   "comment_likes": [
