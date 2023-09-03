@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "title": "Exploración Espacial: Nuevo Planeta Potencialmente Habitable Descubierto",
+      "title": "Exploración Espacial: Nuevo Planeta Potencialmente Habitable Descubierto.",
       "author_id": 7,
       "resume": "Astrónomos han detectado un planeta en la zona habitable de una estrella cercana. Las condiciones en este planeta podrían ser propicias para albergar vida, lo que abre emocionantes posibilidades para la búsqueda de vida extraterrestre.",
       "created_at": "2023-07-10T15:45:00Z",
@@ -47,54 +47,6 @@
       "resume": "Una expedición en las fosas abisales ha revelado una nueva especie de medusa bioluminiscente. Este hallazgo arroja luz sobre las adaptaciones únicas de las criaturas que habitan en los rincones más oscuros del océano.",
       "created_at": "2023-04-18T12:45:00Z",
       "body": "Las profundidades marinas siguen siendo un misterio en gran medida inexplorado. La nueva medusa descubierta posee características bioluminiscentes sorprendentes que podrían estar relacionadas con la captura de presas y la comunicación en entornos de poca luz. La expedición también destacó la importancia de la preservación de estos hábitats inexplorados."
-    },
-    {
-      "title": "TITULO EJEMPLO",
-      "author_id": 16,
-      "resume": "Resumen de la publicvacion",
-      "body": "este es el cuerpo",
-      "created_at": "2023-09-02T11:50:25Z",
-      "id": 8
-    },
-    {
-      "title": "titulo 2",
-      "author_id": 16,
-      "resume": "resumen nuevo probando",
-      "body": "Un equipo de paleontólogos ha anunciado el descubrimiento de una nueva especie de dinosaurio en un yacimiento fósil recientemente excavado. Este hallazgo promete ofrecer fascinantes conocimientos sobre la vida prehistórica en la Tierra",
-      "created_at": "2023-09-02T11:57:16Z",
-      "id": 9
-    },
-    {
-      "title": "titulo 3",
-      "author_id": 16,
-      "resume": "resumen xd",
-      "body": "asdasdasdasdasdasdasd",
-      "created_at": "2023-09-02T11:59:21Z",
-      "id": 10
-    },
-    {
-      "title": "titulo 4",
-      "author_id": 16,
-      "resume": "546",
-      "body": "asdasd",
-      "created_at": "2023-09-02T12:01:07Z",
-      "id": 11
-    },
-    {
-      "title": "titulo 5",
-      "author_id": 16,
-      "resume": "titulo 5",
-      "body": "asdasdasd",
-      "created_at": "2023-09-02T12:03:30Z",
-      "id": 12
-    },
-    {
-      "title": "ejemplo nuevo",
-      "author_id": 16,
-      "resume": "asdasdasdasd",
-      "body": "nueva",
-      "created_at": "2023-09-02T12:04:49Z",
-      "id": 13
     }
   ],
   "comments": [
@@ -245,6 +197,12 @@
       "email": "zaira@vallejo.com",
       "password": "123123",
       "id": 22
+    },
+    {
+      "name": "lucia maria salas",
+      "email": "lucia@salas.com",
+      "password": "123456",
+      "id": 23
     }
   ],
   "post_likes": [
@@ -330,11 +288,6 @@
     },
     {
       "user_id": 16,
-      "post_id": 2,
-      "id": 31
-    },
-    {
-      "user_id": 16,
       "post_id": 8,
       "id": 32
     },
@@ -377,6 +330,11 @@
       "user_id": 7,
       "post_id": 11,
       "id": 40
+    },
+    {
+      "user_id": 16,
+      "post_id": 2,
+      "id": 41
     }
   ],
   "comment_likes": [
