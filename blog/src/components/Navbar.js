@@ -16,6 +16,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import DeblurIcon from '@mui/icons-material/Deblur';
 import UserContext from '../context/userContext/UserContext';
 import Swal from 'sweetalert2';
+import { firstLetters } from '../helpers/helper';
 
 function ResponsiveAppBar() {
 
@@ -42,11 +43,6 @@ function ResponsiveAppBar() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-
-    const firstLetters = text => {
-        const words = text.split(" ")
-        return (words[0][0] + words[1][0]).toUpperCase() || null
-    }
 
     const cerrarSesion = () => {
         Swal.fire({
@@ -127,7 +123,7 @@ function ResponsiveAppBar() {
                                 onClick={handleCloseNavMenu}
                                 to={"/"}
                             >
-                                <p style={{ padding: "0 30px 0 15px" }}>
+                                <p style={{ padding: "15px 40px 0 20px" }}>
                                     <Typography >Inicio</Typography>
                                 </p>
                             </Link>
@@ -193,10 +189,21 @@ function ResponsiveAppBar() {
                                 </IconButton>
                             </Tooltip>
                             :
-                            <div className='d-flex'>
-                                {path !== "/login" && <Typography onClick={() => navigate("/login")} style={{ cursor: "pointer" }} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>}
-                                {path !== "/register" && <Typography onClick={() => navigate("/register")} style={{ cursor: "pointer" }} textAlign="center">{"Crear cuenta"}</Typography>}
-                            </div>
+                            <>
+                                <div className='d-md-none'>
+                                    <Tooltip title="Usuario">
+                                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                            <Avatar src="/static/images/avatar/2.jpg"></Avatar>
+                                        </IconButton>
+                                    </Tooltip>
+                                </div>
+                                <div className='d-none d-md-block'>
+                                    <div className=' d-flex'>
+                                        {path !== "/login" && <Typography onClick={() => navigate("/login")} style={{ cursor: "pointer" }} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>}
+                                        {path !== "/register" && <Typography onClick={() => navigate("/register")} style={{ cursor: "pointer" }} textAlign="center">{"Crear cuenta"}</Typography>}
+                                    </div>
+                                </div>
+                            </>
                         }
 
                         <Menu
@@ -215,9 +222,24 @@ function ResponsiveAppBar() {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            <MenuItem onClick={handleCloseUserMenu}>
-                                <Typography onClick={cerrarSesion} textAlign="right">{"Cerrar sesion"}</Typography>
-                            </MenuItem>
+                            <div onClick={handleCloseUserMenu}>
+                                {user ?
+                                    < MenuItem>
+                                        <Typography onClick={cerrarSesion} textAlign="right">{"Cerrar sesion"}</Typography>
+                                    </MenuItem>
+                                    :
+                                    <>
+                                    {/* <div className='d-flex flex-column align-items-end'> */}
+                                        < MenuItem>
+                                            <Typography onClick={() => navigate("/login")} textAlign="right">{"Iniciar Sesion"}</Typography>
+                                        </MenuItem>
+                                        < MenuItem>
+                                            <Typography onClick={() => navigate("/register")} textAlign="right">{"Registrarse"}</Typography>
+                                        </MenuItem>
+                                    {/* </div> */}
+                                    </>
+                                }
+                            </div>
                         </Menu>
                     </Box>
                 </Toolbar>

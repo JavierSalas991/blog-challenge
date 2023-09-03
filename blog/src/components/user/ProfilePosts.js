@@ -51,7 +51,7 @@ const ProfilePosts = ({ actualUser }) => {
                 {posts ?
                     posts.length > 0 ?
                         <>
-                            <h4>{user && user.id === actualUser.id ? "Mis publicaciones" : `Publicaciones de ${actualUser.name.split(" ")[0]}`}</h4>
+                            <h5>{user && user.id === actualUser.id ? "Mis publicaciones" : `Publicaciones de ${actualUser.name.split(" ")[0]}`}</h5>
                             <div className=' d-flex justify-content-center'>
                                 <Pagination onChange={changePage} className='mt-2' count={Math.ceil(numberOfPosts / 10)} color="primary" />
                             </div>

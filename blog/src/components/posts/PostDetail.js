@@ -119,7 +119,7 @@ const PostDetail = () => {
                         <div className='col-12 col-md-11 col-lg-10 row m-4'>
                             <div className='d-flex justify-content-between'>
                                 <h2 className='postTitle'>{postDetails.title}</h2>
-                                {postDetails.author_id === user.id ?
+                                {user && postDetails.author_id === user.id ?
                                     editing ?
                                         <CancelIcon title="Cancelar" onClick={() => setEditing(false)} style={{ cursor: "pointer" }} className='me-1'></CancelIcon>
                                         :
@@ -132,10 +132,9 @@ const PostDetail = () => {
                             </div>
                             <h4 className='postResume'>{postDetails.resume}</h4>
                             <hr></hr>
-                            <p>{postDetails.body}</p>
+                            <p className='postBody'>{postDetails.body}</p>
                             <p
-                                style={{ fontSize: "85%", marginLeft: "" }}
-                                className='my-0 text-muted'>
+                                className='my-0 text-muted postAuthor'>
                                 Publicado el dia {spanishDate(postDetails.created_at)} por
                                 <span onClick={() => navigate("/profile/" + author.id)} style={{ cursor: "pointer" }} className='text-primary'> {author.name}</span>
                             </p>

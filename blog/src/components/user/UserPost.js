@@ -62,11 +62,6 @@ const UserPost = ({ post }) => {
                 <div className='d-flex justify-content-between'>
                     <p onClick={() => navigate(`/postdetail/${post.id}`)} title="Ver publicacion" className='titleStyle mb-0'>{post.title}</p>
                     <div className='d-flex'>
-                        {/* {post.author_id === user.id &&
-                         <div className='d-flex'>
-                            <EditIcon title="Editar" onClick={() => navigate("/editpost/"+post.id)} style={{ cursor: "pointer" }} className='me-1'></EditIcon>
-                            <DeleteIcon title="Eliminar" style={{ cursor: "pointer" }} className='me-1'></DeleteIcon>
-                        </div> } */}
                         <p style={{ fontSize: "85%" }} className='mt-1 text-muted'>{textSince(post.created_at)}</p>
                     </div>
                 </div>
@@ -76,16 +71,16 @@ const UserPost = ({ post }) => {
                         <div className='d-flex align-items-center'>
                             <FavoriteIcon onClick={dislike} style={{ cursor: "pointer", color: "#CB4335", marginLeft: "10px" }} />
                             {likes.length > 1 ?
-                                <p style={{ fontSize: "85%" }} className='my-0 ms-1 text-muted'>A tí y a {likes.length - 1} persona{likes.length > 2 && "s"} más les gusta esto.</p>
+                                <p style={{ fontSize: "90%" }} className='my-0 ms-1 text-muted'>A tí y a {likes.length - 1} persona{likes.length > 2 && "s"} más les gusta esto.</p>
                                 :
-                                <p style={{ fontSize: "85%" }} className='my-0 ms-1 text-muted'>Te gusta esto.</p>
+                                <p style={{ fontSize: "90%" }} className='my-0 ms-1 text-muted'>Te gusta esto.</p>
                             }
                         </div>
                         :
                         <div className='d-flex align-items-center'>
                             <FavoriteBorderIcon onClick={like} style={{ cursor: "pointer", color: "#CB4335", marginLeft: "10px" }} />
                             {likes.length > 0 &&
-                                <p style={{ fontSize: "85%" }} className='my-0 ms-1 text-muted'>A {likes.length} persona{likes.length > 1 && "s"} les gusta esto.</p>
+                                <p style={{ fontSize: "90%" }} className='my-0 ms-1 text-muted'>A {likes.length} persona{likes.length > 1 && "s"} les gusta esto.</p>
                             }
                         </div>
                     }

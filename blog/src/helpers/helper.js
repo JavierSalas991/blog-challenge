@@ -76,3 +76,8 @@ export function getCurrentDateInISOFormat() {
 
     return `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
 }
+
+export const firstLetters = text => {
+    const words = text.split(" ")
+    return (words[0][0] + words[1][0]).toUpperCase() || null
+}
