@@ -66,13 +66,13 @@ export const deleteCookie = name => {
 }
 
 export function getCurrentDateInISOFormat() {
-    const fechaActual = new Date();
-    const año = fechaActual.getFullYear();
-    const mes = String(fechaActual.getMonth() + 1).padStart(2, '0');
-    const día = String(fechaActual.getDate()).padStart(2, '0');
-    const hora = String(fechaActual.getHours()).padStart(2, '0');
-    const minuto = String(fechaActual.getMinutes()).padStart(2, '0');
-    const segundo = String(fechaActual.getSeconds()).padStart(2, '0');
+    const actualDate = new Date();
+    const year = actualDate.getFullYear();
+    const month = String(actualDate.getMonth() + 1).padStart(2, '0');
+    const day = String(actualDate.getDate()).padStart(2, '0');
+    const hour = String(actualDate.getHours()).padStart(2, '0');
+    const minute = String(actualDate.getMinutes()).padStart(2, '0');
+    const second = String(actualDate.getSeconds()).padStart(2, '0');
 
-    return `${año}-${mes}-${día}T${hora}:${minuto}:${segundo}Z`;
+    return `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
 }

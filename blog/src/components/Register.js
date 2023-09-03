@@ -6,6 +6,39 @@ import { FormControl, InputLabel, Input, FormHelperText, Button } from '@mui/mat
 import { postRegister } from '../helpers/apiHHelper';
 import Swal from 'sweetalert2';
 
+export const validateFormRegister = (formData) => {
+    const errorForm = {};
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i
+
+    if (!formData.name) {
+        errorForm.name = 'Debe ingresar su nombre!';
+    }
+
+    if (!formData.lastName) {
+        errorForm.lastName = 'Debe ingresar su apellido!';
+    }
+
+    if (!formData.email) {
+        errorForm.email = 'Debe ingresar su correo electrónico!';
+    } else if (!regex.test(formData.email)) {
+        errorForm.email = 'El correo electrónico no es válido!';
+    }
+
+    if (!formData.password) {
+        errorForm.password = 'La contraseña es obligatoria!';
+    }
+
+    if (!formData.confirmPassword) {
+        errorForm.confirmPassword = 'Debe confirmar la contraseña!';
+    }
+
+    if (formData.confirmPassword && formData.password && (formData.confirmPassword !== formData.password)) {
+        errorForm.confirmPassword = 'Las contraseñas no coinciden!';
+    }
+
+    return errorForm
+}
+
 const Register = () => {
     const navigate = useNavigate();
 
@@ -34,7 +67,8 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (validateForm()) {
+        const formErrors = validateFormRegister(formData)
+        if (Object.keys(formErrors).length === 0) {
             const data = {
                 "name": `${formData.name} ${formData.lastName}`,
                 "email": formData.email,
@@ -59,43 +93,11 @@ const Register = () => {
                         }
                     })
                 })
+        } else {
+            setErrors(formErrors)
         }
     };
 
-    const validateForm = () => {
-        let errorForm = {};
-
-        if (!formData.name) {
-            errorForm.name = 'Debe ingresar su nombre!';
-        }
-
-        if (!formData.lastName) {
-            errorForm.lastName = 'Debe ingresar su apellido!';
-        }
-
-        if (!formData.email) {
-            errorForm.email = 'Debe ingresar su correo electrónico!';
-        } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i.test(formData.email)) {
-            errorForm.email = 'El correo electrónico no es válido!';
-        }
-
-        if (!formData.password) {
-            errorForm.password = 'La contraseña es obligatoria!';
-        }
-
-        if (!formData.confirmPassword) {
-            errorForm.confirmPassword = 'Debes confirmar la contraseña!';
-        } else if (formData.password !== formData.confirmPassword) {
-            errorForm.confirmPassword = 'Las contraseñas no coinciden!';
-        }
-
-        if (Object.keys(errorForm).length > 0) {
-            setErrors(errorForm);
-            return false
-        } else {
-            return true
-        }
-    }
 
     const userCreated = () => {
         Swal.fire({
@@ -168,13 +170,13 @@ const Register = () => {
                         </FormControl>
                     </div>
 
-                    <div  className='mt-4 d-flex justify-content-center'>
+                    <div className='mt-4 d-flex justify-content-center'>
                         <Button variant="contained" type="submit">Crear cuenta</Button>
                     </div>
 
                 </form>
                 <div className='mt-3 d-flex'>
-                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Ya tienes una cuenta? <span className='text-primary' style={{  cursor: "pointer" }} onClick={() => navigate("/login")}>INICIA SESIÓN</span></p>
+                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Ya tienes una cuenta? <span className='text-primary' style={{ cursor: "pointer" }} onClick={() => navigate("/login")}>INICIA SESIÓN</span></p>
                 </div>
             </div>
         </div>

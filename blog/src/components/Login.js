@@ -6,6 +6,22 @@ import { FormControl, InputLabel, Input, FormHelperText, Button } from '@mui/mat
 import { loginUser, postRegister } from '../helpers/apiHHelper';
 import Swal from 'sweetalert2';
 
+export const validateFormLogin = (formData) => {
+    const errorForm = {};
+
+    if (!formData.email) {
+        errorForm.email = 'Debe ingresar su correo electrónico!';
+    } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i.test(formData.email)) {
+        errorForm.email = 'El correo electrónico no es válido!';
+    }
+
+    if (!formData.password) {
+        errorForm.password = 'La contraseña es obligatoria!';
+    }
+
+    return errorForm
+}
+
 const Login = () => {
 
     const navigate = useNavigate();
@@ -56,7 +72,8 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (validateForm()) {
+        const errorsInForm = validateFormLogin(formData)
+        if (Object.keys(errorsInForm).length === 0) {
             loginUser(formData)
                 .then(res => {
                     res.status === 200 && loggedIn(res.data[0])
@@ -64,29 +81,12 @@ const Login = () => {
                 .catch(error => {
                     handleError(error)
                 })
+        } else {
+            setErrors(errorsInForm);
         }
     };
 
-    const validateForm = () => {
-        let errorForm = {};
 
-        if (!formData.email) {
-            errorForm.email = 'Debe ingresar su correo electrónico!';
-        } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i.test(formData.email)) {
-            errorForm.email = 'El correo electrónico no es válido!';
-        }
-
-        if (!formData.password) {
-            errorForm.password = 'La contraseña es obligatoria!';
-        }
-
-        if (Object.keys(errorForm).length > 0) {
-            setErrors(errorForm);
-            return false
-        } else {
-            return true
-        }
-    }
 
     const loggedIn = (user) => {
         Swal.fire({
@@ -133,7 +133,7 @@ const Login = () => {
 
                 </form>
                 <div className='mt-3 d-flex'>
-                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Aún no  te  registraste? <span className='text-primary' style={{  cursor: "pointer" }} onClick={() => navigate("/register")}>CREAR CUENTA</span></p>
+                    <p style={{ fontSize: "90%" }} className='text-muted'>¿Aún no  te  registraste? <span className='text-primary' style={{ cursor: "pointer" }} onClick={() => navigate("/register")}>CREAR CUENTA</span></p>
                 </div>
             </div>
         </div>
