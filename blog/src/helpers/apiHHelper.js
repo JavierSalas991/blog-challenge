@@ -172,3 +172,12 @@ export const putPost = ({ id, title, body, resume }) => {
         },
     })
 }
+
+export const deletePost = id => {
+    const url = `${serverUrl}/posts/${id}`
+    return axios.delete(url, {
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+    })
+}

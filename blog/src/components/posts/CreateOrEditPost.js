@@ -84,7 +84,16 @@ const CreateOrEditPost = ({ setEditing, reload, previousData }) => {
                     })
                 }
             })
-            .catch(error => console.log(error))
+            .catch(error => showError(error.message))
+    }
+
+    const showError = (message) => {
+        Swal.fire({
+            icon: 'error',
+            html: message,
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
 
     const validateForm = () => {

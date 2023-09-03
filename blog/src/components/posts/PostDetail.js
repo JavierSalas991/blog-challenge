@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
-import { getPost, getUser } from '../../helpers/apiHHelper';
+import { deletePost, getPost, getUser } from '../../helpers/apiHHelper';
 import Error404 from '../Error404';
 import Loading from '../Loading';
 import { spanishDate } from '../../helpers/helper';
@@ -11,6 +11,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import { Button } from '@mui/material';
 import CreateOrEditPost from './CreateOrEditPost';
 import GoBack from '../GoBack';
+import Swal from 'sweetalert2';
 
 const PostDetail = () => {
 
@@ -50,6 +51,54 @@ const PostDetail = () => {
         getPostById(id)
     }
 
+    const showDeleteConfirmation = (onConfirm) => {
+        Swal.fire({
+            html: '¿Seguro que desea eliminar la publicación?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#2c5884',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                onConfirm();
+            }
+        });
+    };
+
+    const showDeleteSuccess = () => {
+        Swal.fire({
+            icon: 'success',
+            title: `Publicacion eliminada con éxito!`,
+            showConfirmButton: false,
+            timer: 1500
+        }).then(() => {
+            navigate(-1)
+        })
+    }
+
+    const deleteThePost = () => {
+        showDeleteConfirmation(() => {
+            deletePost(postDetails.id)
+                .then((res) => {
+                    if (res.status === 200){
+                        showDeleteSuccess()
+                    }
+                })
+                .catch((error) => showError(error.message));
+        });
+    };
+
+    const showError = (message) => {
+        Swal.fire({
+            icon: 'error',
+            html: message,
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+
     useEffect(() => {
         id && getPostById(id)
     }, [id])
@@ -76,7 +125,7 @@ const PostDetail = () => {
                                         :
                                         <div className='d-flex'>
                                             <EditIcon title="Editar" onClick={() => setEditing(true)} style={{ cursor: "pointer" }} className='me-1'></EditIcon>
-                                            <DeleteIcon title="Eliminar" style={{ cursor: "pointer" }} className='me-1'></DeleteIcon>
+                                            <DeleteIcon onClick={deleteThePost} title="Eliminar" style={{ cursor: "pointer" }} className='me-1'></DeleteIcon>
                                         </div>
                                     : null
                                 }
