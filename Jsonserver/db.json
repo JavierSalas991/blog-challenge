@@ -49,14 +49,6 @@
       "body": "Las profundidades marinas siguen siendo un misterio en gran medida inexplorado. La nueva medusa descubierta posee características bioluminiscentes sorprendentes que podrían estar relacionadas con la captura de presas y la comunicación en entornos de poca luz. La expedición también destacó la importancia de la preservación de estos hábitats inexplorados."
     },
     {
-      "id": 7,
-      "title": "Descubrimiento Paleontológico: Nueva Especie de Dinosaurio Revelada",
-      "author_id": 7,
-      "resume": "Un equipo de paleontólogos ha anunciado el descubrimiento de una nueva especie de dinosaurio en un yacimiento fósil recientemente excavado. Este hallazgo promete ofrecer fascinantes conocimientos sobre la vida prehistórica en la Tierra.",
-      "created_at": "2023-09-01T14:30:00Z",
-      "body": "Los restos fósiles de esta nueva especie de dinosaurio, bautizada como 'Dinosaurus descubrensis', fueron encontrados en capas de sedimento que datan de hace millones de años. Los científicos están emocionados por lo que estos fósiles podrían revelar sobre la anatomía, el comportamiento y el entorno en el que vivía esta criatura prehistórica. La investigación está en marcha para desentrañar los secretos que se esconden detrás de este emocionante descubrimiento."
-    },
-    {
       "title": "TITULO EJEMPLO",
       "author_id": 16,
       "resume": "Resumen de la publicvacion",
@@ -103,30 +95,6 @@
       "body": "nueva",
       "created_at": "2023-09-02T12:04:49Z",
       "id": 13
-    },
-    {
-      "title": "ALGO ESCRITO POR LA SACHI",
-      "author_id": 21,
-      "resume": "Este es un resumen de una publicacionn escrita por ercilia salas de prueba",
-      "body": "Este es un resumen de una publicacionn escrita por ercilia salas de prueba Este es un resumen de una publicacionn escrita por ercilia salas de pruebaEste es un resumen de una publicacionn escrita por ercilia salas de pruebaEste es un resumen de una publicacionn escrita por ercilia salas de prueba",
-      "created_at": "2023-09-02T12:11:46Z",
-      "id": 14
-    },
-    {
-      "title": "PRUEBA XD PUAJ",
-      "author_id": 7,
-      "resume": "Esta es una descripcion",
-      "body": "y ese es el cuerpo",
-      "created_at": "2023-09-02T19:21:31Z",
-      "id": 15
-    },
-    {
-      "title": "Nueva",
-      "author_id": 7,
-      "resume": "getPostById",
-      "body": "Cuerpo",
-      "created_at": "2023-09-02T19:49:23Z",
-      "id": 16
     }
   ],
   "comments": [
