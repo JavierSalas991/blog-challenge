@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+## Plataforma de Blog - Challenge de Synagro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Bienvenidos al Challenge de la Plataforma de Blog de Synagro!
 
-## Available Scripts
+## Repositorio
 
-In the project directory, you can run:
+- Repositorio del Challenge: [https://github.com/JavierSalas991/blog-challenge](https://github.com/JavierSalas991/blog-challenge)
 
-### `npm start`
+## Instrucciones
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para comenzar con el Challenge de la Plataforma de Blog, sigue estas instrucciones:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Iniciar el JSON Server
 
-### `npm test`
+Antes de comenzar con la aplicación, necesitas iniciar el servidor JSON. Abre una terminal y navega hasta la carpeta Jsonserver del proyecto y ejecuta el siguiente comando:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm run server`
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Esto iniciará el servidor JSON y proporcionará los datos necesarios para la Plataforma de Blog.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Configuración del Puerto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+La aplicación está configurada para ejecutarse en el puerto 3000 de forma predeterminada. Si deseas cambiar el puerto, puedes hacerlo en el archivo `.env`.
 
-### `npm run eject`
+### 3. Instalación de las Dependencias
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Dentro de la carpeta `blog`, ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4. Ejecutar la Aplicación
 
-## Learn More
+Una vez que hayas instalado las dependencias, puedes iniciar la aplicación con el siguiente comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esto iniciará el servidor de desarrollo y la Plataforma de Blog estará lista para ser utilizada.
