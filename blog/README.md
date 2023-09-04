@@ -41,3 +41,21 @@ Una vez que hayas instalado las dependencias, inicia la aplicación con el sigui
 `npm start`
 
 Esto iniciará el servidor de desarrollo y la Plataforma estará lista para ser utilizada.
+
+## Pruebas unitarias
+
+Para ejecutar las pruebas unitarias, puedes usar el siguiente comando:
+
+`npm test`
+
+Esto ejecutará todas las pruebas en el proyecto.
+
+### Ejecutar pruebas individualmente
+
+Si deseas ejecutar pruebas individuales en archivos específicos, puedes utilizar los siguientes comandos:
+
+`npm test ./src/tests/helper.test.js`
+
+`npm test ./src/tests/Register.test.js`
+
+`npm test ./src/tests/Login.test.js`
