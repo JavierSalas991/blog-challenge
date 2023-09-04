@@ -52,10 +52,13 @@ Esto ejecutará todas las pruebas en el proyecto.
 
 ### Ejecutar pruebas individualmente
 
-Si deseas ejecutar pruebas individuales en archivos específicos, puedes utilizar los siguientes comandos:
+Si deseas ejecutar pruebas individuales en archivos específicos, puedes utilizar el siguiente formato:
 
-`npm test ./src/tests/helper.test.js`
+`npm test ruta/archivo.test.js`
 
-`npm test ./src/tests/Register.test.js`
+/////////////////////////////////////////////////////////
 
-`npm test ./src/tests/Login.test.js`
+Desarrollador:
+## Javier Jose Salas
+## https://www.linkedin.com/in/javierjosesalas/
+## https://github.com/JavierSalas991
