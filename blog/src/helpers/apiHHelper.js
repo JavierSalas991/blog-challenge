@@ -19,8 +19,6 @@ export const getNumberOfPostsById = async (id) => {
         },
     })
 
-    console.log(res.data.length);
-
     return res.data.length;
 }
 
@@ -143,7 +141,6 @@ export const loginUser = async ({ email, password }) => {
         }
 
         if (user.password === password) {
-            console.log(res);
             return res
         } else {
             throw new Error('Contraseña incorrecta');

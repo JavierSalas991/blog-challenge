@@ -39,7 +39,7 @@ const Posts = () => {
         }
     }
 
-    const changePage = (event, page) => {
+    const changePage = (e, page) => {
         setPage(page);
     };
 

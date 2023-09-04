@@ -61,10 +61,6 @@ function ResponsiveAppBar() {
         })
     }
 
-    useEffect(() => {
-        console.log(path);
-    }, [path])
-
     return (
         <AppBar position="fixed">
             <Container maxWidth="xl">
@@ -229,14 +225,12 @@ function ResponsiveAppBar() {
                                     </MenuItem>
                                     :
                                     <>
-                                    {/* <div className='d-flex flex-column align-items-end'> */}
                                         < MenuItem>
                                             <Typography onClick={() => navigate("/login")} textAlign="right">{"Iniciar Sesion"}</Typography>
                                         </MenuItem>
                                         < MenuItem>
                                             <Typography onClick={() => navigate("/register")} textAlign="right">{"Registrarse"}</Typography>
                                         </MenuItem>
-                                    {/* </div> */}
                                     </>
                                 }
                             </div>

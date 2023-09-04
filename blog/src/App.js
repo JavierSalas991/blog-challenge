@@ -5,11 +5,9 @@ import "./App.css"
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Link,
+  Route
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
-// import UserState from "./context/userContext/UserState";
 import PostDetail from "./components/posts/PostDetail";
 import Sidebar from "./components/user/Sidebar";
 import Profile from "./components/user/Profile";
@@ -42,7 +40,6 @@ function App() {
       overflow: "auto"
     }}>
       <BrowserRouter>
-        <Navbar></Navbar>
         <div className="row w-100 m-0 p-0">
           {user &&
             <div className="d-none d-md-block col-3 col-xl-2 m-0 p-0">

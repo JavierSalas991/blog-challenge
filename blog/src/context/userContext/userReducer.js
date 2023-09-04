@@ -1,5 +1,5 @@
 
-import { USER } from "../../types/userTypes";
+import { USER, USER_POSTS } from "../../types/userTypes";
 
 const userReducer = (state, action) => {
     switch (action.type) {
@@ -7,6 +7,11 @@ const userReducer = (state, action) => {
             return {
                 ...state,
                 user: action.payload,
+            }
+        case USER_POSTS:
+            return {
+                ...state,
+                userPosts: action.payload,
             }
         default:
             return state;

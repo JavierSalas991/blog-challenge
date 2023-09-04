@@ -62,7 +62,6 @@ const Post = ({ post }) => {
         <div className='row my-1 containerPost '>
             <div className='col-2 col-md-1  d-flex justify-content-end'>
                 <div className='postPhoto'>
-                    {/* <img className='w-100 h-auto' src={avatarIcon}></img> */}
                     <Avatar alt={author.name} src="/static/images/avatar/2.jpg">{firstLetters(author.name)}</Avatar>
                 </div>
             </div>

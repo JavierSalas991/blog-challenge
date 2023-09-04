@@ -119,11 +119,6 @@ const Register = () => {
         user && navigate("/")
     }, [user])
 
-    useEffect(() => {
-        console.log(typeof errors);
-        console.log(errors.message);
-    }, [errors])
-
     return (
         <div style={{ width: "100%", height: "100vh" }} className='d-flex justify-content-center align-items-center'>
             <div className='containerRegister d-flex flex-column'>

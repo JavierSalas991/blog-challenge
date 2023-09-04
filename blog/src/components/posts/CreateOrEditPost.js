@@ -8,7 +8,7 @@ import { postNewPost, putPost } from '../../helpers/apiHHelper';
 
 const CreateOrEditPost = ({ setEditing, reload, previousData }) => {
 
-    const { user } = useContext(UserContext)
+    const { user, reloadUserPosts } = useContext(UserContext)
 
     const [formData, setFormData] = useState({
         title: '',
@@ -63,6 +63,7 @@ const CreateOrEditPost = ({ setEditing, reload, previousData }) => {
                     }).then(() => {
                         reload()
                         setEditing(false)
+                        reloadUserPosts(user.id)
                     })
                 }
             })
