@@ -10,7 +10,13 @@
 
 Para comenzar con el Challenge de la Plataforma de Blog, sigue estas instrucciones:
 
-### 1. Iniciar el JSON Server
+### 1. Clonar el Repositorio
+
+Primero, clona el repositorio en tu máquina local utilizando el siguiente comando:
+
+git clone https://github.com/JavierSalas991/blog-challenge.git
+
+### 2. Iniciar el JSON Server
 
 Antes de comenzar con la aplicación, necesitas iniciar el servidor JSON. Abre una terminal y navega hasta la carpeta Jsonserver del proyecto y ejecuta el siguiente comando:
 
@@ -19,18 +25,18 @@ Antes de comenzar con la aplicación, necesitas iniciar el servidor JSON. Abre u
 
 Esto iniciará el servidor JSON y proporcionará los datos necesarios para la Plataforma de Blog.
 
-### 2. Configuración del Puerto
+### 3. Configuración del Puerto
 
 La aplicación está configurada para ejecutarse en el puerto 3000 de forma predeterminada. Si deseas cambiar el puerto, puedes hacerlo en el archivo `.env`.
 
-### 3. Instalación de las Dependencias
+### 4. Instalación de las Dependencias
 
 Dentro de la carpeta `blog`, ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
 `npm install`
 
 
-### 4. Ejecutar la Aplicación
+### 5. Ejecutar la Aplicación
 
 Una vez que hayas instalado las dependencias, puedes iniciar la aplicación con el siguiente comando:
 
