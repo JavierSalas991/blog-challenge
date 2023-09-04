@@ -82,6 +82,7 @@ const CreateOrEditPost = ({ setEditing, reload, previousData }) => {
                     }).then(() => {
                         reload()
                         setEditing(false)
+                        reloadUserPosts(user.id)
                     })
                 }
             })
