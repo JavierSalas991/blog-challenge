@@ -56,7 +56,6 @@ Si deseas ejecutar pruebas individuales en archivos específicos, puedes utiliza
 
 `npm test ruta/archivo.test.js`
 
-/////////////////////////////////////////////////////////
 
 ## Desarrollador:
 
