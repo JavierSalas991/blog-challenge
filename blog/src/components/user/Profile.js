@@ -17,7 +17,7 @@ const Profile = () => {
 
     const [actualUser, setActualUser] = useState(null)
 
-    const getMainData = id => {
+    const getProfileData = id => {
         getUser(id)
             .then(user => {
                 user && user.data && setActualUser(user.data)
@@ -25,7 +25,7 @@ const Profile = () => {
     }
 
     useEffect(() => {
-        id && getMainData(id)
+        id && getProfileData(id)
     }, [id])
 
     return (

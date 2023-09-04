@@ -16,7 +16,7 @@ const UserPost = ({ post }) => {
 
     const [likes, setLikes] = useState(null)
 
-    const getMainData = ({ id }) => {
+    const getLikes = ({ id }) => {
         getLikesById(id)
             .then(likes => {
                 likes && likes.data && setLikes(likes.data)
@@ -52,7 +52,7 @@ const UserPost = ({ post }) => {
     }
 
     useEffect(() => {
-        getMainData(post)
+        getLikes(post)
     }, [post])
 
     return (

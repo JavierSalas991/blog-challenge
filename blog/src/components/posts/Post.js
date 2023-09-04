@@ -17,6 +17,7 @@ const Post = ({ post }) => {
     const [author, setAuthor] = useState(null)
     const [likes, setLikes] = useState(null)
 
+    // Function to get author and likes data for the post
     const getMainData = ({ id, author_id }) => {
         Promise.all([getUser(author_id), getLikesById(id)])
             .then(([user, likes]) => {

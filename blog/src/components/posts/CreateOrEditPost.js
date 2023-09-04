@@ -61,9 +61,9 @@ const CreateOrEditPost = ({ setEditing, reload, previousData }) => {
                         showConfirmButton: false,
                         timer: 1500
                     }).then(() => {
+                        reloadUserPosts(user.id)
                         reload()
                         setEditing(false)
-                        reloadUserPosts(user.id)
                     })
                 }
             })
@@ -80,9 +80,9 @@ const CreateOrEditPost = ({ setEditing, reload, previousData }) => {
                         showConfirmButton: false,
                         timer: 1500
                     }).then(() => {
+                        reloadUserPosts(user.id)
                         reload()
                         setEditing(false)
-                        reloadUserPosts(user.id)
                     })
                 }
             })

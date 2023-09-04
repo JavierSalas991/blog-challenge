@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
 
 const PostDetail = () => {
 
-    const { user } = useContext(UserContext)
+    const { user, reloadUserPosts } = useContext(UserContext)
 
     const navigate = useNavigate()
 
@@ -74,6 +74,7 @@ const PostDetail = () => {
             showConfirmButton: false,
             timer: 1500
         }).then(() => {
+            reloadUserPosts(user.id)
             navigate(-1)
         })
     }

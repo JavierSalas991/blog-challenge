@@ -21,6 +21,7 @@ function App() {
 
   const { user, setUser } = useContext(UserContext)
 
+  // Function to load the user from cookies and save it in the context
   const saveUser = () => {
     try {
       const user = JSON.parse(getCookie("user"))

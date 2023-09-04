@@ -1,3 +1,4 @@
+// Return a readable time difference from a date to now
 export const textSince = (date) => {
     const since = new Date(date);
     const today = new Date();
@@ -29,6 +30,7 @@ export const spanishMonths = [
     "Diciembre",
 ];
 
+// Format a date in Spanish
 export const spanishDate = d => {
     const date = new Date(d);
     const day = date.getDate();
@@ -38,6 +40,7 @@ export const spanishDate = d => {
     return `${day} de ${month} de ${year}`
 }
 
+// Function to set a cookie with a name, value, and expiration time in days
 export const setCookie = (cname, cvalue, days) => {
     const d = new Date();
     d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -45,6 +48,7 @@ export const setCookie = (cname, cvalue, days) => {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+// Function to get the value of a cookie by the name
 export const getCookie = (cname) => {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -61,10 +65,12 @@ export const getCookie = (cname) => {
     return "";
 }
 
+// Function to delete a cookie by the name
 export const deleteCookie = name => {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
 }
 
+// Function to get the current date in ISO format (YYYY-MM-DDTHH:MM:SSZ)
 export function getCurrentDateInISOFormat() {
     const actualDate = new Date();
     const year = actualDate.getFullYear();
@@ -77,6 +83,7 @@ export function getCurrentDateInISOFormat() {
     return `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
 }
 
+// Returns the first letters of words in text in uppercase
 export const firstLetters = text => {
     const words = text.split(" ")
     return (words[0][0] + words[1][0]).toUpperCase() || null

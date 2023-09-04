@@ -98,7 +98,6 @@ const Register = () => {
         }
     };
 
-
     const userCreated = () => {
         Swal.fire({
             html: 'Usuario creado con éxito!',
