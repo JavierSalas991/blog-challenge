@@ -40,6 +40,7 @@ function App() {
       overflow: "auto"
     }}>
       <BrowserRouter>
+        <Navbar></Navbar>
         <div className="row w-100 m-0 p-0">
           {user &&
             <div className="d-none d-md-block col-3 col-xl-2 m-0 p-0">
@@ -47,7 +48,6 @@ function App() {
             </div>
           }
           <div className={`col-12 col-md-9 col-xl-10 ${!user && "container"}`}>
-
             <Routes>
               <Route path="/" element={<Posts />} />
               <Route path="/profile/:id" element={<Profile />} />
