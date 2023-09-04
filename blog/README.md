@@ -58,7 +58,8 @@ Si deseas ejecutar pruebas individuales en archivos específicos, puedes utiliza
 
 /////////////////////////////////////////////////////////
 
-### Desarrollador:
+## Desarrollador:
+
 Javier Jose Salas
 
 https://www.linkedin.com/in/javierjosesalas/
