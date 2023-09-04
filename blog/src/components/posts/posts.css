@@ -1,0 +1,133 @@
+.nameStyle {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1F618D;
+    font-size: 150%;
+    margin-bottom: 10px;
+}
+
+.mailStyle {
+    font-weight: bold;
+    color: #1F618D;
+    font-size: 100%;
+}
+
+.profileOptions {
+    text-decoration: none;
+    color: black;
+}
+
+.profileOptions:hover {
+    background-color: #1F618D;
+    color: #fff;
+    cursor: pointer
+}
+
+.titleStyle {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.802);
+    font-size: 140%;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.titleStyle:hover {
+    color: #1F618D;
+    cursor: pointer;
+}
+
+.resumeStyle {
+    font-style: italic;
+    font-size: 120%;
+}
+
+.containerPost {
+    font-size: 3vw;
+    width: 100%;
+    border-bottom: 1px solid #EBEDEF;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.postTitle {
+    font-size: 6.5vw;
+    font-weight: bold;
+    color: #1F618D;
+    margin-bottom: 10px;
+    /* text-align: center; */
+}
+
+.postResume {
+    font-size: 5vw;
+    font-style: italic;
+    margin-bottom: 2vw;
+    /* text-align: center; */
+}
+.postBody{
+    font-size: 4.2vw;
+}
+.postAuthor{
+    font-size: 3vw;
+}
+
+.buttonAddPost {
+    border: 2px #1F618D solid;
+    color: #1F618D;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4rem;
+    right: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .containerPost {
+        font-size: 13px;
+    }
+
+    .buttonAddPost {
+        width: 45px;
+        height: 45px;
+        top: 5rem;
+        right: 2rem;
+    }
+
+    .postTitle {
+        font-size: 4vw;
+    }
+
+    .postResume {
+        font-size: 3.2vw;
+    }
+    .postBody{
+        font-size: 2.8vw;
+    }
+    .postAuthor{
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .containerPost {
+        font-size: 15px;
+    }
+
+    .postTitle {
+        font-size: 2.5vw;
+    }
+    .postResume {
+        font-size: 1.5vw;
+    }
+    .postBody{
+        font-size: 1vw;
+    }
+    .postAuthor{
+        font-size: 0.9vw;
+    }
+}

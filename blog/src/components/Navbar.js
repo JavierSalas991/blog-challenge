@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
     Box,
     Toolbar,
@@ -9,19 +9,23 @@ import {
     AppBar,
     Container,
     Avatar,
-    Button,
     Tooltip,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
-// import { Menu as MenuIcon } from '@mui/icons-material';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
 import DeblurIcon from '@mui/icons-material/Deblur';
-import LogoutIcon from '@mui/icons-material/Logout';
-
-const pages = ['Inicio', 'Mis publicaciones', 'Perfil'];
+import UserContext from '../context/userContext/UserContext';
+import Swal from 'sweetalert2';
+import { firstLetters } from '../helpers/helper';
 
 function ResponsiveAppBar() {
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    const path = location.pathname
+
+    const { user, setUserWithCookie } = useContext(UserContext)
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -40,8 +44,25 @@ function ResponsiveAppBar() {
         setAnchorElUser(null);
     };
 
+    const cerrarSesion = () => {
+        Swal.fire({
+            html: '¿Seguro que desea  cerrar sesión?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#2c5884',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Salir',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                setUserWithCookie(null)
+                window.location = "/"
+            }
+        })
+    }
+
     return (
-        <AppBar position="static">
+        <AppBar position="fixed">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <DeblurIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -49,7 +70,7 @@ function ResponsiveAppBar() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/inicio"
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -92,17 +113,28 @@ function ResponsiveAppBar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
+
+                            <Link
+                                style={{ color: "black", textDecoration: "none" }}
+                                onClick={handleCloseNavMenu}
+                                to={"/"}
+                            >
+                                <p style={{ padding: "15px 40px 0 20px" }}>
+                                    <Typography >Inicio</Typography>
+                                </p>
+                            </Link>
+                            {user &&
                                 <Link
                                     style={{ color: "black", textDecoration: "none" }}
                                     onClick={handleCloseNavMenu}
-                                    to={`/${page.toLowerCase().replace(/\s+/g, '')}`}
+                                    to={"/profile/" + user.id}
                                 >
-                                    <p style={{ padding: "0 10px" }}>
-                                        <Typography > {page}</Typography>
+                                    <p style={{ padding: "0 30px 0 15px" }}>
+                                        <Typography >Perfil</Typography>
                                     </p>
                                 </Link>
-                            ))}
+                            }
+
                         </Menu>
                     </Box>
                     <DeblurIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -125,24 +157,51 @@ function ResponsiveAppBar() {
                         BLOG
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-
-                            <Link
-                                style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
-                                onClick={handleCloseNavMenu}
-                                to={`/${page.toLowerCase().replace(/\s+/g, '')}`}
-                            >
-                                <Typography textAlign="center"> {page}</Typography>
-                            </Link>
-                        ))}
+                        {user &&
+                            <>
+                                <Link
+                                    style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
+                                    onClick={handleCloseNavMenu}
+                                    to={"/"}
+                                >
+                                    <Typography textAlign="center">Inicio</Typography>
+                                </Link>
+                                <Link
+                                    style={{ color: "#fff", marginLeft: "1rem", textDecoration: "none" }}
+                                    onClick={handleCloseNavMenu}
+                                    to={"/profile/" + user.id}
+                                >
+                                    <Typography textAlign="center">Mis publicaciones</Typography>
+                                </Link>
+                            </>
+                        }
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Opciones">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                            </IconButton>
-                        </Tooltip>
+                        {user ?
+                            <Tooltip title={user.name}>
+                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                    <Avatar alt={user.name} src="/static/images/avatar/2.jpg">{firstLetters(user.name)}</Avatar>
+                                </IconButton>
+                            </Tooltip>
+                            :
+                            <>
+                                <div className='d-md-none'>
+                                    <Tooltip title="Usuario">
+                                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                            <Avatar src="/static/images/avatar/2.jpg"></Avatar>
+                                        </IconButton>
+                                    </Tooltip>
+                                </div>
+                                <div className='d-none d-md-block'>
+                                    <div className=' d-flex'>
+                                        {path !== "/login" && <Typography onClick={() => navigate("/login")} style={{ cursor: "pointer" }} className='me-2' textAlign="center">{"Iniciar sesion"}</Typography>}
+                                        {path !== "/register" && <Typography onClick={() => navigate("/register")} style={{ cursor: "pointer" }} textAlign="center">{"Crear cuenta"}</Typography>}
+                                    </div>
+                                </div>
+                            </>
+                        }
+
                         <Menu
                             sx={{ mt: '45px' }}
                             id="menu-appbar"
@@ -159,11 +218,22 @@ function ResponsiveAppBar() {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-
-                            <MenuItem onClick={handleCloseUserMenu}>
-                                <Typography textAlign="right">{"Cerrar sesion"}</Typography>
-                            </MenuItem>
-
+                            <div onClick={handleCloseUserMenu}>
+                                {user ?
+                                    < MenuItem>
+                                        <Typography onClick={cerrarSesion} textAlign="right">{"Cerrar sesion"}</Typography>
+                                    </MenuItem>
+                                    :
+                                    <>
+                                        < MenuItem>
+                                            <Typography onClick={() => navigate("/login")} textAlign="right">{"Iniciar Sesion"}</Typography>
+                                        </MenuItem>
+                                        < MenuItem>
+                                            <Typography onClick={() => navigate("/register")} textAlign="right">{"Registrarse"}</Typography>
+                                        </MenuItem>
+                                    </>
+                                }
+                            </div>
                         </Menu>
                     </Box>
                 </Toolbar>
